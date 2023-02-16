@@ -1,7 +1,7 @@
 * { margin: 0; padding: 0;}
 body{
     font: 13px/1.4 NotoSansKR,NotoSansJP,"돋움",Dotum,AppleGothic,Sans-serif; color: #666;
-    min-width: 1200px; height: 100%; background: #fff;
+    min-width: 1190px; height: 100%; background: #fff;
 }
 a{text-decoration: none;}
 ul, li{
@@ -12,16 +12,22 @@ ul, li{
     box-shadow: 0 1px 3px 0 rgb(41 42 42 / 15%);
 }
 .inner-container{
-    width: 1200px; margin: 0 auto; padding: 0 30px;
+    width: 1190px; margin: 0 auto; padding: 0 30px;
 }
 .box-header{
     position: relative; height: 100px;
 }
+/* 로고 */
+.container-header .logo-box{
+    width: 300px; height: 100px; background-color: yellow; float: le;
+}
+/* 검색창 */
+
 .box-header .search-area {
-    position: absolute; top: 50%; left: 280px; margin-top: -28px;
+    position: absolute; top: 50%; left: 280px; margin-top: -28px; float: left;
 }
 .box-header .form-search{
-    width: 592; height: 52px; border: 2px solid #2c47dc; border-radius: 5px;
+    width: 592px; height: 52px; border: 2px solid #2c47dc; border-radius: 5px;
 }
 .box-header .input-search{
     width: 500px; height: 24px; padding: 13px 15px; margin: 1px; background-color: #fff; font-size: 18px; line-height: 24px; 
@@ -35,6 +41,12 @@ ul, li{
     width: 22px; height: 22px; display: inline-block; vertical-align: top;
     color: #fff;
 }
+/* 아이콘 박스 */
+.header-icon-box{
+    float: right; background-color: yellow;
+    width: 100px; height: 100px;
+}
+/* 맵 아이콘 */
 .box-header .box-map{
     position: absolute; top: 35%; left: 900px;
 }
@@ -47,7 +59,7 @@ ul, li{
 .box-header .box-map .icon-map:visited{
     color: #2c47dc;
 }
-
+/* 마이페이지 아이콘 */
 .box-header .box-user{
     position: absolute; top: 35%; left: 1000px;
 }
@@ -62,7 +74,7 @@ ul, li{
 }
 /* 내용 */
 .container-body{
-    width: 1200px; margin: 0 auto; 
+    width: 1190px; margin: 0 auto; 
 }
 .title .tag-area{
     text-align: left; padding-bottom: 0;
@@ -235,7 +247,7 @@ footer{
     box-sizing: border-box;
 }
 footer .box-footer{
-    width: 1200px; margin: 0 auto;
+    width: 1190px; margin: 0 auto;
 }
 footer .box-footer .footer-data{
     padding: 20px 0; border-top: 1px solid #e6e6e6; position: relative;
