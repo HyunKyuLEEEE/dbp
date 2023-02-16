@@ -38,7 +38,7 @@ a{
   
 }
 .main-icon-box{
-  float: left; text-align: center; line-height: 100px; width: 500px; background-color: #fff;
+  float: left; text-align: center; line-height: 100px; width: 400px; background-color: #fff;
   
 }
 .btn-menu{
@@ -51,12 +51,12 @@ font-size: 30px;line-height: 100px;
   font-size: 15px; float: left; 
 }
 .search-containerbox{
-  float: right; background-color: #fff; height: 100px;
+  float: left; background-color: #fff; height: 100px;
   
 }
 .search-box{
   position: relative; border-radius: 10px;
-  float: right; width: 590px; padding-top: 25px;
+  float: right; width: 490px; padding-top: 25px;
 }
 .search-box>*{
   border-radius: 10px;
@@ -105,9 +105,30 @@ font-size: 30px;line-height: 100px;
 }
 /* 메인 메뉴바 끝 */
 
+.head-box .box-quickMenu{
+  float: right; width: 200px; background-color: #fff; height: 100px;
+}
+.head-box .box-quickMenu .box-shopping{
+  width: 100px; float: left; text-align: center; line-height: 20px; padding-top: 25px;
+  
+}
+.box-quickMenu .box-shopping .btn-shopping i{
+  font-size: 35px; color: #000;
+}
+.box-quickMenu .box-shopping .text-shopping{
+  display: block; font-size: 15px; color: #000;
+}
+.head-box .box-quickMenu .box-myPage{
+  width: 100px; float: left; text-align: center; line-height: 20px; padding-top: 25px;
+}
+.box-quickMenu .box-myPage .btn-myPage i{
+  font-size: 35px; color: #000;
+}
+.box-quickMenu .box-myPage .text-myPage{
+  display: block; font-size: 15px; color: #000;
+}
 
-
-
+/* 메뉴바 우측 아이콘 */
 
 .contents{
   padding-top: 135px; z-index: 1;
