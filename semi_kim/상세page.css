@@ -28,29 +28,29 @@ a{
   box-shadow: 0 3px 5px 1px rgba(0,0,0,0.3);  z-index: 998;
   
 }
-.head-box{
+.header .head-box{
   width: 1190px; margin: 0 auto; height: 100%;
     position: relative;
 }
 
-.menu-box{
+.header .head-box .menu-box{
   float: left; width: 100px; height: 100%; 
   
 }
-.main-icon-box{
+.header .head-box .main-icon-box{
   float: left; text-align: center; line-height: 100px; width: 400px; background-color: #fff;
   
 }
-.btn-menu{
+.head-box .menu-box .btn-menu{
 width: 100px; position: absolute; border: none; background-color: #fff;
 top: 0; left: 0; cursor: pointer; padding: 0; outline: 0;
 font-size: 30px;line-height: 100px;
 }
-.search{
+.head-box .search-containerbox .search{
   width: 100%; height: 50px; border: 1px solid black; background-color:#eef0f2;
   font-size: 15px; float: left; 
 }
-.search-containerbox{
+.header .head-box .search-containerbox{
   float: left; background-color: #fff; height: 100px;
   
 }
