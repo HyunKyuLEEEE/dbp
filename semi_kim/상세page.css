@@ -66,9 +66,9 @@ font-size: 30px;line-height: 100px;
   top: 25px; right: 0; bottom: 0; cursor: pointer; padding: 0; outline: 0;
   font-size: 30px;line-height: 50px; color: black; text-align: center;
 }
-
+/* 메인 메뉴바 끝 */
 .search-keyword{
-  position: absolute; right: -1px; top: 85px; width: 590px; border: 1px solid #666; background: #fff;
+  position: absolute; right: 198px; top: 85px; width: 490px; border: 1px solid #666; background: #fff;
   border-radius: 10px; z-index: 999; text-align: left; display: none; 
 }
 .search-keyword h2{
@@ -103,7 +103,7 @@ font-size: 30px;line-height: 100px;
   padding: 0 20px; line-height: 33px; font-size: 14px; color: #333; border-radius: 0 0 10px 0;
   border: 0 none; cursor: pointer;
 }
-/* 메인 메뉴바 끝 */
+/* 서치바 클릭 박스 */
 
 .head-box .box-quickMenu{
   float: right; width: 200px; background-color: #fff; height: 100px;
