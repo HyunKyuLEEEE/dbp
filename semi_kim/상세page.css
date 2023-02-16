@@ -7,7 +7,7 @@
   min-width: 1190px;
   font-family: -apple-system,BlinkMacSystemFont,"Malgun Gothic","맑은 고딕",helvetica,"Apple SD Gothic Neo",sans-serif;
   line-height: 16px; font-size: 12px; color: #202020; 
-  height: 1000px; 
+  
 }
 ul,li{
   list-style: none;
@@ -18,6 +18,7 @@ ul,li{
 a{
   text-decoration: none;
 }
+
 /* 공통 적용 */
 
 
@@ -28,7 +29,7 @@ a{
   
 }
 .head-box{
-  width: 940px; margin: 0 auto; height: 100%;
+  width: 1190px; margin: 0 auto; height: 100%;
     position: relative;
 }
 
@@ -37,7 +38,7 @@ a{
   
 }
 .main-icon-box{
-  float: left; text-align: center; line-height: 100px; width: 318px; background-color: #fff;
+  float: left; text-align: center; line-height: 100px; width: 500px; background-color: #fff;
   
 }
 .btn-menu{
@@ -46,29 +47,29 @@ top: 0; left: 0; cursor: pointer; padding: 0; outline: 0;
 font-size: 30px;line-height: 100px;
 }
 .search{
-  width: 520px; height: 50px; border: 1px solid black; background-color: rgb(202, 202, 202);
+  width: 100%; height: 50px; border: 1px solid black; background-color:#eef0f2;
   font-size: 15px; float: left; 
 }
 .search-containerbox{
-  float: right;  padding-top: 25px; padding-bottom: 23px;  background-color: #fff;
+  float: right; background-color: #fff; height: 100px;
   
 }
 .search-box{
   position: relative; border-radius: 10px;
-  float: right; 
+  float: right; width: 590px; padding-top: 25px;
 }
 .search-box>*{
   border-radius: 10px;
 }
 .btn-search{
-  width: 50px; height: 50px; position: absolute; border: none;
-  top: 0; right: 0; bottom: 0; cursor: pointer; padding: 0; outline: 0;
+  width: 50px; height: 50px; position: absolute; border: none; 
+  top: 25px; right: 0; bottom: 0; cursor: pointer; padding: 0; outline: 0;
   font-size: 30px;line-height: 50px; color: black; text-align: center;
 }
 
 .search-keyword{
-  position: absolute; right: 0; top: 85px; width: 520px; border: 1px solid #666; background: #fff;
-  border-radius: 10px; z-index: 999; text-align: left; display: none;
+  position: absolute; right: -1px; top: 85px; width: 590px; border: 1px solid #666; background: #fff;
+  border-radius: 10px; z-index: 999; text-align: left; display: none; 
 }
 .search-keyword h2{
   height: 33px; line-height: 33px; margin-top: 20px; padding: 0 28px; font-weight: 800; 
@@ -109,7 +110,7 @@ font-size: 30px;line-height: 100px;
 
 
 .contents{
-  padding-top: 135px; height: 1500px; z-index: 1;
+  padding-top: 135px; z-index: 1;
 }
 .content-box{
   width: 940px; margin: 0 auto; font-size: 40px;position: relative;
@@ -123,7 +124,7 @@ font-size: 30px;line-height: 100px;
 }
 .content-title h2 .icon-good{
   overflow: hidden; position: absolute; left: 0; top: 4px; width: 26px; height: 24px;
-  background: url(/img/img.jpg) 0 0 no-repeat; background-size: 26px auto; text-indent: -9999px;
+  background: url(img/img.jpg) 0 0 no-repeat; background-size: 26px auto; text-indent: -9999px;
 }
 .con+.con{
   padding-top: 35px;
@@ -140,7 +141,7 @@ font-size: 30px;line-height: 100px;
 }
 .btn-more{
   display: block; position: absolute; bottom: 8px; right: 0; margin-right: 0; padding-right: 14px;
-  color: #666; font-size: 16px; background: url(/img/ico_arrowbtm.jpg) 98% 50%/7px 4px no-repeat; 
+  color: #666; font-size: 16px; background: url(img/ico_arrowbtm.jpg) 98% 50%/7px 4px no-repeat; 
   cursor: pointer; border: 0 none; 
 }
 .list-tag{
@@ -206,7 +207,7 @@ font-size: 30px;line-height: 100px;
   padding-top: 35px; display: none;
 }
 .best-top{
-  position: relative; width: 100%; margin-top: 24px;
+  position: relative; width: 100%;
 }
 .icon-bar{
   display: inline-block; margin-top: 11px; font-size: 22px; color: #000;
@@ -258,6 +259,22 @@ font-size: 30px;line-height: 100px;
 .list-best .item-more{
   border: 1px solid #ccc;
 }
+/* 각 지역 SNS 완료 */
+
+.section-line{
+  margin-top: 30px; border-top: 2px solid #e6e6e6;
+}
+.admin-pick{
+  padding-top: 35px;
+}
+.best-search{
+  padding-top: 35px;
+}
+
+
+
+
+
 
 
 
