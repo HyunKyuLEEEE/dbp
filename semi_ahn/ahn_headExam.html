@@ -22,6 +22,7 @@
             position: relative;
             border: 1px solid black;
             overflow: hidden;
+            margin-bottom: 300px;
         }
         .common>*{
         }
@@ -228,6 +229,65 @@
                 line-height: 50px;
                 font-size: 30px;
             }
+            .head_exam5{
+                height: 500px;
+                margin-top: 400px;
+                position: relative;
+                margin-bottom: 0;
+                
+            }
+            .exam5-menu{
+                box-shadow: 4px 4px 4px #dae1e6;
+                height: 80px;
+                
+            }
+            .exam5-list{
+                display: flex;
+                
+            }
+            .exam5-item{
+                width: 20%;
+                display: inline-block;
+                font-size: 24px;
+                line-height: 80px;
+                font-weight: bold;
+                text-align: center;
+            }
+            img{
+                width: 1190px;
+                height: 900px;
+                z-index: -1;
+            }
+            .exam5-searchbox{
+                position: absolute;
+                width: calc(100% - 4px);
+                bottom: 0;
+                height: 80px;
+            }
+            .exam5-searchwindow{
+                height: 80px;
+                border: none;
+                font-size: 24px;
+                width: calc(100% - 80px);
+                text-align: center;
+            }
+            .exam5-searchbtn{
+                float: left;
+                width: 80px;
+                height: 80px;
+                background-color: #dae1e6;
+                text-align: center;
+                font-size: 28px;
+                line-height: 80px;
+                font-weight: bold;
+            }
+            .exam5-servicebox{
+                position: absolute;
+                float: right;
+                bottom: 100px;
+                right: 10px;
+                font-size: 24px;
+            }
     </style>
     <script>
 
@@ -236,6 +296,9 @@
 <body>
     
     <div class="head_exam_container">
+        메인을 최대한 심플하게 만드는 헤드 <br>
+        메뉴바와 이미지 배너로만 전체 구성, 글자 최소화 <br>
+        검색창과 메뉴바는 메인에서 스크립트를 통해 등장
         <div class="common head_exam1 clearfix">
             <div class="exam1-logo">S-pace <br>construction</div>          
             <div class="exam1-servicebox"> 
@@ -246,6 +309,9 @@
                 </ul>
             </div>
         </div>
+        1번보단 덜하지만 역시나 최대한 심플한 헤드 <br>
+        검색창은 메인 중앙에 위치, 디자인 자체는 나쁘지 않다고 생각하지만 <br>
+        공용 헤드로는 사용이 어려울 느낌
         <div class="common head_exam2">
             <div class="exam2-logo">BizBud</div>
             <div class="exam2-menu">
@@ -268,6 +334,10 @@
 
             
         </div>
+        제일 흔하고 보기 쉽지만 그만큼 제일 깔끔하고 괜찮아보임 정보량도 부족하지 않음 <br>
+        로그인시 로그인이 마이페이지로 변하고
+        상단에 배너칸에 로그아웃 버튼 노출
+        상단은 롤링배너
         <div class="common head_exam3">
             <div class="exam3-topbanner">광고배너입니다</div>
             <div class="exam3-servicebox">
@@ -290,6 +360,8 @@
                  </div>
             </div>
         </div>
+        1번에 정보량을 조금 더해본 느낌임 <br>
+        맘에는 드는데 솔직히 여행사이트스럽지 않고 검색창 가시성이 좀 떨어지는듯
         <div class="common head_exam4">
             <div class="exam4-box">
                 <div class="exam4-searchbox">
@@ -311,9 +383,31 @@
             <div class="exam4-logo"> Q Production</div>
             
         </div>
-
+        <div class="common head_exam5">
+            <div class="exam5-servicebox">
+                로그인
+            </div>
+            <div class="exam5-menu">
+                <ul class="exam5-list">
+                    <li class="exam5-item">메뉴1</li>
+                    <li class="exam5-item">메뉴2</li>
+                    <li class="exam5-item">메뉴3</li>
+                    <li class="exam5-item">메뉴4</li>
+                    <li class="exam5-item">메뉴5</li>
+                </ul>
+                <a href="" class="exam5-mainbanner"><img src="./semi_ahn_img/hotel2.jpg" alt=""></a>
+            </div>
+            <div class="exam5-searchbox">
+                    <input type="text" class="exam5-searchwindow">
+                    <a href="" class="exam5-searchbtn">검색</a>
+            </div>
+        </div>
+        방금 즉흥적으로 만듬 <br>
+        이미지 때문인지는 모르겠는데 올드한 느낌 <br>
+        이미지 중앙에 로고 삽입
 
     </div>
+
     
 </body>
 </html>
