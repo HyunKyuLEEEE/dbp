@@ -144,7 +144,7 @@ a{
 
 
 .contents{
-  padding-top: 150px; z-index: 1;
+  padding-top: 175px; z-index: 1;
 }
 .contents .content-box{
   width: 1190px; margin: 0 auto; font-size: 40px;position: relative;
@@ -243,60 +243,67 @@ a{
 .contents-region{
   padding-top: 35px; display: none;
 }
+.admin-pick .best-top,
 .contents-region .best-top{
   position: relative; width: 100%;
 }
+.admin-pick .best-top .icon-bar,
 .contents-region .best-top .icon-bar{
   display: inline-block; margin-top: 11px; font-size: 22px; color: #000;
   position: relative; padding-left: 15px;
 }
+.admin-pick .best-top .icon-bar::before,
 .contents-region .best-top .icon-bar::before{
   content: ''; display: inline-block; position: absolute; left: 0; top: 6px;
   width: 4px; height: 20px; background-color: #0a97cd;
 }
+.admin-pick .best-top .best-content,
 .contents-region .best-top .best-content{
   margin-top: 15px;
 }
+.admin-pick .best-top .list-best,
 .contents-region .best-top .list-best{
   margin-bottom: 16px;
 }
 .best-content .item-best{
   float: left; position: relative; width: 181.5px; height: 181.5px; box-sizing: border-box;
-  margin-left: 20px;
+  margin-left: 20px; 
 }
-.item-best:first-child{
+.best-content .item-best:first-child{
   margin-left: 0;
 }
 .best-content .item-best img{
-  width: 100%; height: 100%; vertical-align: middle; border: 0 none;
+  width: 100%; height: 100%; vertical-align: middle; border: 0 none; border-radius: 10px 10px;
 }
+.admin-pick .best-top .link-best,
 .contents-region .best-top .link-best{
-  position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+  position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 10px 10px;
   background: url(http://cdn.visitkorea.or.kr/resources/images/sub/bg_dim.png) 0 0 repeat;
 }
+.admin-pick .best-top .table-best,
 .contents-region .best-top .table-best{
   overflow: hidden; position: absolute; top: 50%; left: 0; width: 100%;
   height: 47px; margin-top: -24px;
 }
-.link-best .table{
+.best-content .link-best .table{
   display: table; width: 100%;
 }
-.link-best .cell{
+.best-content .link-best .cell{
   display: table-cell; height: 47px; vertical-align: middle;
 }
-.link-best .name-best{
+.best-content .link-best .name-best{
   display: block; padding: 0 10px;  font-size: 18px; color: #fff;
   font-weight: normal; text-align: center; box-sizing: border-box; text-overflow: ellipsis;
   line-height: 22px;
 }
-.list-best a{
+.best-content .list-best a{
   display: block; box-sizing: border-box; padding: 56px 0; font-size: 18px;
   text-align: center; color: #333;
 }
-.list-best .item-more{
-  border: 1px solid #ccc;
+.best-content .list-best .item-more{
+  border: 1px solid #ccc; border-radius: 10px 10px;
 }
-.list-best .name-more{
+.best-content .list-best .name-more{
   line-height: 69.5px;
 }
 /* 각 지역 SNS 완료 */
