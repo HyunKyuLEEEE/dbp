@@ -241,11 +241,78 @@ ul, li{
 .contents-detail .photo-gallery .swiper-slide{
     background-size: cover; background-position: 50% 50%; background-repeat: no-repeat;
 }
-.contents-detail .photo_gallery .swiper-pagination{
+.contents-detail .photo-gallery .swiper-pagination{
     right: 30px; left: auto; top: 30; height: 35px; line-height: 33px; border-radius: 50px; width: 65px; color: #fff;
     background: rgba(0, 0, 0, 0.5); font-size: 16px; letter-spacing: -1px;
 }
+.contents-detail .photo-gallery .swiper-btn-next,
+.contents-detail .photo-gallery .swiper-btn-prev{
+    width: 40px; height: 40px; margin-top: -20px; position: absolute;
+    top: 50%;
+}
 
+.contents-detail .photo-gallery .swiper-btn-next{
+    background: url(https://korean.visitkorea.or.kr/resources/images/sub/btn_photo_next.png) 0 0 /100% 100% no-repeat;
+    right: 60px; 
+}
+.contents-detail .photo-gallery .swiper-btn-prev{
+    background: url(https://korean.visitkorea.or.kr/resources/images/sub/btn_photo_prev.png) 0 0 /100% 100% no-repeat;
+    left: 60px;
+}
+
+/* 상세정보 */
+.contents .detail-view .detail-title{
+    position: relative; width: 100%; margin-top: 24px;
+}
+.contents .detail-view .detail-title h3{
+    width: 100%; padding: 31px 0 9px; margin-top: 0; font-size: 24px;
+    border-bottom: 2px solid #333; font-weight: 800;
+    letter-spacing: -1px; color: #333;
+}
+
+.contents .detail-view .detail-title .btn-modify{
+    position: absolute; right: 0; top: 18px; width: 171px;
+    height: 40px; line-height: 38px; border: 1px solid #767676;
+    font-size: 16px; color: #000;
+
+}
+.contents .detail-view .detail-title .btn-modify span{
+    display: inline-block; letter-spacing: -0.5px;
+}
+.contents .detail-view .detail-title .btn-modify span::before{
+    content: ''; display: inline-block; width: 16px; height: 16px;
+    background: url(https://korean.visitkorea.or.kr/resources/images/sub/icon_btn_modify.png) 0 0 / 100% 100% no-repeat;
+    vertical-align: -2px; margin-right: 8px;
+}
+.contents .detail-view .detail-text{
+ position: relative; padding-bottom: 0 !important; padding-top: 33px;
+}
+.contents .detail-view .detail-text .inner-detail{
+    overflow: hidden; height: 150px;
+}
+.contents .detail-view .detail-text .inner-text-area{
+    border-bottom: 0; padding-bottom: 0;
+}
+.contents .detail-view .detail-text .inner-text-area > p{
+    color: #333; font-size: 18px; line-height: 1.7; letter-spacing: -1px;
+}
+.contents .detail-view .detail-text .inner-text-area::after{
+    content: ''; display: block; clear: both;
+}
+.contents .detail-view .detail-text .text-more{
+    position: relative; height: 33px;
+}
+.contents .detail-view .detail-text .text-more .btn-more{
+    display: block; right: 3px; overflow: hidden; width: auto;
+    font-weight: 700; background: #fff; border: 0;
+    position: absolute; top: 0; color: #333; letter-spacing: -0.5px;
+    font-size: 16px;
+}
+.contents .detail-view .detail-text .text-more .btn-more::after{
+    content: '+'; width: auto; height: auto; font-size: 16px;
+    font-weight: 700; background: none; margin: 0 0 0 5px; color: #333;
+
+}
 /* 푸터 */
 footer{
     width: 100%; margin-top: 60px; padding-bottom: 10px; background: #f7f7f7;
@@ -284,6 +351,8 @@ footer .footer-data .footer-address li{
 footer .footer-data .footer-address li>span{
     padding-right: 10px;
 }
+
+
 /* 공통 */
 .blind{
     position: absolute;
