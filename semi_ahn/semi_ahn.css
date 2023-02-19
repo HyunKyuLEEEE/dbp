@@ -23,28 +23,86 @@ a{
 .main-container{
     margin: 0 auto;
 }
-.main-banner-link{
+/* 배너링크 */
+.main-banner-box{
     position: relative;
-    text-align: center;
+    
+    
 }
-.main-banner-link img{
-    width: 100%;
-    height: 500px;
-}
-.main-banner-text{
-position: absolute;
-bottom: 100px;
-text-align: start;
-z-index: 2;
-margin: 10px;
-color: white;
-font-size: 40px;
-left: 450px;
-}
-.main-banner-text p{
-    font-size: 17px;
+.main-banner-box .btn-next,
+.main-banner-box .btn-prev,
+.main-special .btn-next,
+.main-special .btn-prev{
+    position: absolute;
+    top: calc(50%);
+    z-index: 10;
+    border: none;
+    background-color: #666;
+    font-size: 40px;
+    opacity: 0.7;
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
 }
 
+.main-special .btn-next,
+.main-special .btn-prev{
+    top: 230px;
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+    text-align: center;
+}
+.main-banner-box .btn-next:hover,
+.main-banner-box .btn-prev:hover,
+.main-special .btn-next:hover,
+.main-special .btn-prev:hover{
+    opacity: 1;
+}
+.main-banner-box .btn-next,
+.main-special .btn-next{
+    right: 0;
+}
+.main-banner-box .banner-link{
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.main-banner-box .banner-link img{
+    z-index: 0;
+}
+
+.main-banner-box .swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .main-banner-box  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .main-banner-box .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 4s linear;
+}
+.main-banner-box .swiper-slide:hover img{
+  transform: scale(1.2);
+  }
+
+
+
+
+/* 메인 큐레이션 */
 .main-curation-area{
     margin-top: -4.5px;
     width: 100%;
@@ -66,13 +124,33 @@ left: 450px;
     width: 940px;
     margin: 0 auto;
 }
-.curation-box .curation-tab >li{
+.curation-box .curation-tab .curation-menu{
     padding: 0 0 2px;
     margin-bottom: 10px;
     display: block;
+    width: 200px;
     position: relative;
 }
-
+.curation-box .curation-tab >li > a:hover{
+    background-color: rgb(61, 61, 223);
+    color: white;
+}
+.curation-box .curation-tab .curation-content{
+margin-left: 20px;
+margin-top: 20px;
+box-sizing: border-box;
+word-break: keep-all;
+padding: 8px 0 0 8px;
+font-weight: 300;
+font-size: 15px;
+color: #666;
+line-height: 18px;
+letter-spacing: -0.7px;
+display: none;
+}
+.curation-box .curation-tab .pointon{
+    display: block;
+}
 .curation-box .curation-tab >li >a{
     float: left;
     width: 165px;
@@ -84,6 +162,7 @@ left: 450px;
     padding: 7px;
     text-align: center;
     font-weight: bold;
+    margin-bottom: 10px;
 }
 
 .curation-box .curation-tab >li >a >span{
@@ -100,6 +179,7 @@ left: 450px;
     position: relative;
     margin-left: 20px;
     width: 233px;
+    overflow: hidden;
 }
 
 .placelist .list-item >a{
@@ -109,14 +189,44 @@ left: 450px;
     height: 235px;
     overflow: hidden;
 }
+
+.placelist .list-item a strong{
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    bottom: 0;
+    display: block;
+    font-weight: 700;
+    font-size: 16px;
+    height: 72px;
+    color: #fff;
+    line-height: 72px;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    letter-spacing: -0.5px;
+    z-index: 5;
+}
+.inner2{
+    top :  -50px !important;
+}
+.inner3{
+    top : -110px !important;
+}
 .curation-inner{
     position: absolute;
     left: 181px;
     top: 0;
+    display: none;
 }
 .curation-inner .placelist .item-img{
     height: 100%;
     width: 100%;
+    transition: all 1s linear;
+}
+.curation-inner .placelist .item-img:hover{
+    transform: scale(1.2);
 }
 .more-view{
     display: flex;
@@ -169,10 +279,15 @@ left: 450px;
     width: 980px;
     margin: 0 auto;
     padding: 0 20px 0;
+    height: 100%;
 }
 .special-container{
     width: 100%;
     padding-top: 0;
+    height: 100%;
+}
+.special-container .special-left{
+    margin-top: 12px;
 }
 
 .special-container .special-left .special-banner{
@@ -250,7 +365,8 @@ left: 450px;
     float: right;
     position: relative;
     width: 465px;
-    margin-top: -8px;
+    margin : 4px 10px 10px 10px;
+    padding: 4px;
 }
 .special-swipperlist .swipperitem{
     padding: 0 0 2px 0;
@@ -268,7 +384,6 @@ left: 450px;
     border-radius: 10px;
     position: relative;
 }
-
 .main-theme-container{
     width: 980px;
     margin: 0 auto;
