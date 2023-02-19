@@ -6,76 +6,178 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./semi_ahn.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="./semi_ahn.js"></script>
+    <script src="./semi_ahn_tool/Jquery/js/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+  <style>
+
+  </style>
 </head>
 <body>
     <div class="main-container">
-        <!-- 메인배너링크 -->
-        <div class="main-banner-link" >
-            <a href="">
-                <img src="./semi_ahn_img/444fa34d-d8dc-4ad0-ac06-0bcb785fd2fb.raw.png" alt="">
-            </a>
-            <div class="main-banner-text">
-                <h5>여행구독서비스! 가볼래-터 2월호 오픈 </h5><h6><br></h6>
-                <p> SNS 감성 + 옛 추억 가득한 여행 특집! 가볼래-터 확인하고, 다양한 선물이 가득한 여행복권도 있지마세요.</p>
-            </div>
+        <!-- 메인배너링크  1차 완료-->
+        <div class="main-banner-box" >  
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="#" class="banner-link">
+                            <img src="./semi_ahn_img/444fa34d-d8dc-4ad0-ac06-0bcb785fd2fb.raw.png" alt="">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#" class="banner-link">
+                            <img src="./semi_ahn_img/444fa34d-d8dc-4ad0-ac06-0bcb785fd2fb.raw.png" alt="">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#" class="banner-link">
+                            <img src="./semi_ahn_img/444fa34d-d8dc-4ad0-ac06-0bcb785fd2fb.raw.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            <div class="swiper-scrollbar"></div>
+          </div>
+          <button class="btn-next btn">></button>
+          <button class="btn-prev btn"><</button>
         </div>
-        <!-- 메인 큐레이션링크 -->
+        <!-- 메인 큐레이션링크 1차완료 -->
         <div class="main-curation-area">
             <h2> <a class="curation-logo" href=""><img src="./semi_ahn_img/tit_curation_area.png" alt=""></a></h2>
             <div class="curation-box">
                 <ul class="curation-tab">
-                    <li class="curation-menu1 clearfix"><a href=""><span>핫플콕콕</span></a>
-                        <div class="curation-inner">
+                    <li class="curation-menu clearfix"><a href="#"><span>랜덤 추천 여행지</span></a>
+                        <div class="curation-content pointon">
+                            <span>관광 빅데이터 정보로 분석한 지역별 핫한 여행지와 맛집을 소개합니다.</span>
+                        </div>
+                        <div class="curation-inner inner1 pointon">
                             <ul class="placelist">
-                                <li class="list-item"><a href=""><img class="item-img" src="./semi_ahn_img/47519d29-aeeb-40ed-b6ec-c17b550f13e0.progress.jpg" alt=""></a></li>
-                                <li class="list-item"><a href=""><img class="item-img" src="./semi_ahn_img/0fbc4882-60d7-4b28-88cc-593504f8685e.progress.jpg" alt=""></a></li>
-                                <li class="list-item"><a href=""><img class="item-img" src="./semi_ahn_img/8a1012d8-cd9d-4348-89f9-3bd03a6e0572.progress.jpg" alt=""></a></li>
+                                <li class="list-item">
+                                    <a href="#">
+                                        <strong>서울 고성막국수</strong>
+                                        <img class="item-img" src="./semi_ahn_img/47519d29-aeeb-40ed-b6ec-c17b550f13e0.progress.jpg" alt="">
+                                    </a>
+                                </li>
+                                <li class="list-item">
+                                    <a href="#">
+                                        <strong>서울 고성막국수</strong>
+                                        <img class="item-img" src="./semi_ahn_img/47519d29-aeeb-40ed-b6ec-c17b550f13e0.progress.jpg" alt="">
+                                    </a>
+                                </li>
+                                <li class="list-item">
+                                    <a href="#">
+                                        <strong>서울 고성막국수</strong>
+                                         <img class="item-img" src="./semi_ahn_img/47519d29-aeeb-40ed-b6ec-c17b550f13e0.progress.jpg" alt="">
+                                    </a>
+                                </li>
                             </ul>
                             <div class="more-view">
                                 <button class="more-view-recbtn">오늘의 핫플콕콕 추천</button>
-                                <a href="" class="more-view-btn">더보기</a>
+                                <a href="#" class="more-view-btn">더보기</a>
                             </div>
                         </div>
                     </li>
-                    <li class="curation-menu2 clearfix"><a href=""><span>AI콕콕플래너</span></a></li>
-                    <li class="curation-menu3 clearfix"><a href=""><span>AI콕콕</span></a></li>
+                    <li class="curation-menu clearfix"><a href="#"><span>금주의 추천 코스</span></a>
+                        <div class="curation-content">
+                            <span>관광 빅데이터 정보로 분석한 지역별 핫한 여행지와 맛집을 소개합니다.</span>
+                        </div>
+                        <div class="curation-inner inner2">
+                            <ul class="placelist">
+                                <li class="list-item">
+                                    <a href="#">
+                                        <strong>서울 고성막국수2</strong>
+                                        <img class="item-img" src="./semi_ahn_img/47519d29-aeeb-40ed-b6ec-c17b550f13e0.progress.jpg" alt="">
+                                    </a>
+                                </li>
+                                <li class="list-item">
+                                    <a href="#">
+                                        <strong>서울 고성막국수2</strong>
+                                        <img class="item-img" src="./semi_ahn_img/47519d29-aeeb-40ed-b6ec-c17b550f13e0.progress.jpg" alt="">
+                                    </a>
+                                </li>
+                                <li class="list-item">
+                                    <a href="#">
+                                        <strong>서울 고성막국수2</strong>
+                                         <img class="item-img" src="./semi_ahn_img/47519d29-aeeb-40ed-b6ec-c17b550f13e0.progress.jpg" alt="">
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="more-view">
+                                <button class="more-view-recbtn">오늘의 핫플콕콕 추천</button>
+                                <a href="#" class="more-view-btn">더보기</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="curation-menu clearfix"><a href="#"><span>에디터 추천 코스</span></a>
+                        <div class="curation-content">
+                            <span>관광 빅데이터 정보로 분석한 지역별 핫한 여행지와 맛집을 소개합니다.</span>
+                        </div>
+                        <div class="curation-inner inner3">
+                            <ul class="placelist">
+                                <li class="list-item">
+                                    <a href="#">
+                                        <strong>서울 고성막국수1</strong>
+                                        <img class="item-img" src="./semi_ahn_img/47519d29-aeeb-40ed-b6ec-c17b550f13e0.progress.jpg" alt="">
+                                    </a>
+                                </li>
+                                <li class="list-item">
+                                    <a href="#">
+                                        <strong>서울 고성막국수1</strong>
+                                        <img class="item-img" src="./semi_ahn_img/47519d29-aeeb-40ed-b6ec-c17b550f13e0.progress.jpg" alt="">
+                                    </a>
+                                </li>
+                                <li class="list-item">
+                                    <a href="#">
+                                        <strong>서울 고성막국수1</strong>
+                                         <img class="item-img" src="./semi_ahn_img/47519d29-aeeb-40ed-b6ec-c17b550f13e0.progress.jpg" alt="">
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="more-view">
+                                <button class="more-view-recbtn">오늘의 핫플콕콕 추천</button>
+                                <a href="#" class="more-view-btn">더보기</a>
+                            </div>
+                        </div>
+                    </li>
                     
                 </ul>
                    
             </div>
             
         </div>
-        <!-- 메인 스페셜에디션 -->
-        <div class="main-special" style="height: 510px;">
+        <!-- 메인 스페셜에디션  1차 완료-->
+        <div class="main-special" style="height: 560px;">
             <div class="special-inner">
-                <div class="special-container">
+                <div class="special-container clearfix">
                     <div class="special-left">
                         <div class="special-banner">
-                            <a href=""><img class="special-img" src="./semi_ahn_img/ea603ba0-cc83-4348-8289-c2a216dc943d.png" alt=""></a>
+                            <a href="#"><img class="special-img" src="./semi_ahn_img/ea603ba0-cc83-4348-8289-c2a216dc943d.png" alt=""></a>
                         </div>
                         <div class="special-article">
                             <div class="special-arttitle">
                                 <span>오늘의 여행Issue</span>
-                                <span class="arttitle-btn"></span>
+                               <a href="#"> <span class="arttitle-btn"></span></a>
                             </div>
                             <ul class="special-artlist">
                                 <li class="special-artitem">
-                                    <a href="">
+                                    <a href="#">
                                         <em style="color: #a2660d;"> 국립나주문화재연구소 |</em> 오랜 연구 성과 담은 전시홍보관 재개관
                                     </a>
                                 </li>
                                 <li class="special-artitem">
-                                    <a href="">
+                                    <a href="#">
                                         <em style="color: #a2660d;"> 3월 3일(금)까지 |</em> 농촌여행 청년 기획가 공모
                                     </a>
                                 </li>
                                 <li class="special-artitem">
-                                    <a href="">
+                                    <a href="#">
                                         <em style="color: #a2660d;"> 2월 추천 여행지ㅣ</em>예향 전남의 역사문화 숨결 즐기세요
                                     </a>
                                 </li>
                                 <li class="special-artitem">
-                                    <a href="">
+                                    <a href="#">
                                         <em style="color: #a2660d;"> 부산ㅣ</em> 숨이 막히도록 아름다운 부산 ‘워케이션 거점센터’ 개소!
                                     </a>
                                 </li>
@@ -83,58 +185,126 @@
                         </div>
                     </div>
                     <div class="special-right">
-                        <ul class="special-swipperlist">
-                            <li class="special-swipperitem">
-                                <ul class="swipperitem" style="width: 465px;">
-                                    <li class="inneritem">
-                                        <a href=""><img src="./semi_ahn_img/dc0fb47e-e59c-49b7-bc89-b87946c25e6e.png" alt=""></a>
-                                    </li>
-                                    <li class="inneritem">
-                                        <a href=""><img src="./semi_ahn_img/dc0fb47e-e59c-49b7-bc89-b87946c25e6e.png" alt=""></a>
-                                    </li>
-                                    <li class="inneritem">
-                                        <a href=""><img src="./semi_ahn_img/dc0fb47e-e59c-49b7-bc89-b87946c25e6e.png" alt=""></a>
-                                    </li>
-                                    <li class="inneritem">
-                                        <a href=""><img src="./semi_ahn_img/dc0fb47e-e59c-49b7-bc89-b87946c25e6e.png" alt=""></a>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
+                        <div class="swiper mySwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">                        
+                                    <ul class="special-swipperlist">
+                                        <li class="special-swipperitem">
+                                            <ul class="swipperitem" style="width: 465px;">
+                                                <li class="inneritem">
+                                                    <a href="#"><img src="./semi_ahn_img/dc0fb47e-e59c-49b7-bc89-b87946c25e6e.png" alt=""></a>
+                                                </li>
+                                                <li class="inneritem">
+                                                    <a href="#"><img src="./semi_ahn_img/dc0fb47e-e59c-49b7-bc89-b87946c25e6e.png" alt=""></a>
+                                                </li>
+                                                <li class="inneritem">
+                                                    <a href="#"><img src="./semi_ahn_img/dc0fb47e-e59c-49b7-bc89-b87946c25e6e.png" alt=""></a>
+                                                </li>
+                                                <li class="inneritem">
+                                                    <a href="#"><img src="./semi_ahn_img/dc0fb47e-e59c-49b7-bc89-b87946c25e6e.png" alt=""></a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="swiper-slide">                        
+                                    <ul class="special-swipperlist">
+                                        <li class="special-swipperitem">
+                                            <ul class="swipperitem" style="width: 465px;">
+                                                <li class="inneritem">
+                                                    <a href="#"><img src="./semi_ahn_img/dc0fb47e-e59c-49b7-bc89-b87946c25e6e.png" alt=""></a>
+                                                </li>
+                                                <li class="inneritem">
+                                                    <a href="#"><img src="./semi_ahn_img/dc0fb47e-e59c-49b7-bc89-b87946c25e6e.png" alt=""></a>
+                                                </li>
+                                                <li class="inneritem">
+                                                    <a href="#"><img src="./semi_ahn_img/dc0fb47e-e59c-49b7-bc89-b87946c25e6e.png" alt=""></a>
+                                                </li>
+                                                <li class="inneritem">
+                                                    <a href="#"><img src="./semi_ahn_img/dc0fb47e-e59c-49b7-bc89-b87946c25e6e.png" alt=""></a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="swiper-slide">                        
+                                    <ul class="special-swipperlist">
+                                        <li class="special-swipperitem">
+                                            <ul class="swipperitem" style="width: 465px;">
+                                                <li class="inneritem">
+                                                    <a href="#"><img src="./semi_ahn_img/dc0fb47e-e59c-49b7-bc89-b87946c25e6e.png" alt=""></a>
+                                                </li>
+                                                <li class="inneritem">
+                                                    <a href="#"><img src="./semi_ahn_img/dc0fb47e-e59c-49b7-bc89-b87946c25e6e.png" alt=""></a>
+                                                </li>
+                                                <li class="inneritem">
+                                                    <a href="#"><img src="./semi_ahn_img/dc0fb47e-e59c-49b7-bc89-b87946c25e6e.png" alt=""></a>
+                                                </li>
+                                                <li class="inneritem">
+                                                    <a href="#"><img src="./semi_ahn_img/dc0fb47e-e59c-49b7-bc89-b87946c25e6e.png" alt=""></a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="swiper-slide">                        
+                                    <ul class="special-swipperlist">
+                                        <li class="special-swipperitem">
+                                            <ul class="swipperitem" style="width: 465px;">
+                                                <li class="inneritem">
+                                                    <a href="#"><img src="./semi_ahn_img/dc0fb47e-e59c-49b7-bc89-b87946c25e6e.png" alt=""></a>
+                                                </li>
+                                                <li class="inneritem">
+                                                    <a href="#"><img src="./semi_ahn_img/dc0fb47e-e59c-49b7-bc89-b87946c25e6e.png" alt=""></a>
+                                                </li>
+                                                <li class="inneritem">
+                                                    <a href="#"><img src="./semi_ahn_img/dc0fb47e-e59c-49b7-bc89-b87946c25e6e.png" alt=""></a>
+                                                </li>
+                                                <li class="inneritem">
+                                                    <a href="#"><img src="./semi_ahn_img/dc0fb47e-e59c-49b7-bc89-b87946c25e6e.png" alt=""></a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                          </div>
+
+                        </div>
+                        <button class="btn-next btn">></button>
+                        <button class="btn-prev btn"><</button>
                 </div>
             </div>
         </div>
-        <!-- 메인 테마 -->
+        <!-- 메인 테마 1차완료  -->
         <div class="main-theme-container">
             <div class="theme-inner clearfix">
                 <h2 class="theme-title">함께 떠나는 테마 힐링 여행</h2>
                 <div class="theme-left">
-                    <a href="" class="theme-article">
+                    <a href="#" class="theme-article">
                         <h3>아이와 추억하는 특별한 여행 <br>경기 수원 박물관 투어</h3>
                         <img src="./semi_ahn_img/46c4df2e-0ebe-4298-8bf1-7570863211c9.png" alt="">
                     </a>
-                    <a href="" class="theme-article">
+                    <a href="#" class="theme-article">
                         <h3>아이와 추억하는 특별한 여행 <br>경기 수원 박물관 투어</h3>
                         <img src="./semi_ahn_img/46c4df2e-0ebe-4298-8bf1-7570863211c9.png" alt="">
                     </a>
                 </div>
                 <div class="theme-mid">                   
-                    <a href="" class="theme-article">
+                    <a href="#" class="theme-article">
                         <h3>아이와 추억하는 특별한 여행 <br>경기 수원 박물관 투어</h3>
                         <img src="./semi_ahn_img/46c4df2e-0ebe-4298-8bf1-7570863211c9.png" alt="">
                     </a>
-                    <a href="" class="theme-article">
+                    <a href="#" class="theme-article">
                         <h3>아이와 추억하는 특별한 여행 <br>경기 수원 박물관 투어</h3>
                         <img src="./semi_ahn_img/46c4df2e-0ebe-4298-8bf1-7570863211c9.png" alt="">
                     </a>
                 </div>
                 <div class="theme-right">
-                    <a href="" class="theme-article">
+                    <a href="#" class="theme-article">
                         <h3>아이와 추억하는 특별한 여행 <br>경기 수원 박물관 투어</h3>
                         <img src="./semi_ahn_img/46c4df2e-0ebe-4298-8bf1-7570863211c9.png" alt="">
                     </a>
-                    <a href="" class="theme-article">
+                    <a href="#" class="theme-article">
                         <h3>아이와 추억하는 특별한 여행 <br>경기 수원 박물관 투어</h3>
                         <img src="./semi_ahn_img/46c4df2e-0ebe-4298-8bf1-7570863211c9.png" alt="">
                     </a>
@@ -142,5 +312,9 @@
             </div>
         </div>
     </div>
+
+    <script>
+
+    </script>
 </body>
 </html>
