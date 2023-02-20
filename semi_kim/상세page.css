@@ -34,7 +34,7 @@ a{
 }
 
 .header .head-box .main-icon-box{
-  float: left; width: 400px; background-color: #fff; margin-top: 20px; height: 75px; text-align: center;
+  float: left; width: 380px; background-color: #fff; margin-top: 20px; height: 75px; text-align: center;
   
 }
 
@@ -43,7 +43,7 @@ a{
   font-size: 15px; float: left;  padding: 0 5px;
 }
 .header .head-box .search-containerbox{
-  float: left; background-color: #fff; height: 100px;
+  float: left; background-color: #fff; height: 100px; 
   
 }
 .head-box .search-containerbox .search-box{
@@ -321,7 +321,7 @@ a{
   padding-top: 35px; position: relative; width: 1190px; overflow: hidden;
 }
 .content-box .best-search .best-search-container{
-  height: 100%; width: 100%;
+  height: 100%; width: 100%; margin-top: 35px;
 }
 .content-box .best-search .best-search-link::after{
   border-radius: 4px; box-shadow: inset 0 0 0 1px rgb(0 0 0 / 16%); content: '';
@@ -334,12 +334,12 @@ a{
   margin-right: 0;
 }
 .content-box .best-search .best-search-box img{
-  height: 166px; width: 100%;
+  height: 166px; width: 100%; 
 }
 .best-search-container .btn-prev,
 .best-search-container .btn-next{
   background-color: #fff; border: 0; border-radius: 50%; box-shadow: 0 0 0 1px rgb(0 0 0 / 5%), 0 2px 6px 0 rgb(0 0 0 / 5%), 0 4px 12px 0 rgb(0 0 0 / 5%);
-  height: 40px; position: absolute; text-align: center; top: 50%; transform: translateY(50%); transition: .2s;
+  height: 40px; position: absolute; text-align: center; top: 65%; transform: translateY(50%); transition: .2s;
   width: 40px; z-index: 10;
 }
 
