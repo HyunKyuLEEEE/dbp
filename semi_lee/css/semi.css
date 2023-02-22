@@ -308,16 +308,7 @@ font-family: "SF Pro KR", "SF Pro Display", "SF Pro Icons", -apple-system, Blink
     top: 50%; z-index: 1;
 }
 
-/*
-.contents-detail .photo-gallery .swiper-btn-next{
-    background: url(https://korean.visitkorea.or.kr/resources/images/sub/btn_photo_next.png) 0 0 /100% 100% no-repeat;
-    right: 60px; 
-}
-.contents-detail .photo-gallery .swiper-btn-prev{
-    background: url(https://korean.visitkorea.or.kr/resources/images/sub/btn_photo_prev.png) 0 0 /100% 100% no-repeat;
-    left: 60px;
-}
-*/
+
 /* 상세정보 */
 .contents .detail-view .detail-title{
     position: relative; width: 100%; margin-top: 24px;
