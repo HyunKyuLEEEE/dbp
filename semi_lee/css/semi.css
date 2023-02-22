@@ -1,82 +1,139 @@
-* { margin: 0; padding: 0;}
-body{
-    font: 13px/1.4 NotoSansKR,NotoSansJP,"돋움",Dotum,AppleGothic,Sans-serif; color: #666;
-    min-width: 1190px; height: 100%; background: #fff;
+
+*{
+    padding: 0; margin: 0;
 }
-a{text-decoration: none;}
-ul, li{
+
+#body { 
+    min-width: 1190px;
+    font-family: -apple-system,BlinkMacSystemFont,"Malgun Gothic","맑은 고딕",helvetica,"Apple SD Gothic Neo",sans-serif;
+    line-height: 16px; font-size: 12px; color: #202020; 
+}
+
+ul,li { 
     list-style: none;
 }
-/* 상단 */
-.container-header{
-    box-shadow: 0 1px 3px 0 rgb(41 42 42 / 15%);
-}
-.inner-container{
-    width: 1190px; margin: 0 auto; padding: 0 30px;
-}
-.box-header{
-    position: relative; height: 100px;
-}
-/* 로고 */
-.container-header .logo-box{
-    width: 300px; height: 100%; float: left; border: 1 solid #2c47dc;
-    display: block;
+
+.clearfix::after {
+    content: ''; clear: both; display: block; 
 }
 
-/* 검색창 */
+a {
+    text-decoration: none;
+}
 
-.box-header .search-area {
-    /* position: absolute; top: 50%; margin-top: -28px; float: left; width: 600px; height: 100%; display: block; */
-    float: left; height: 100%; position: relative; top: 50%; margin-top: -28px; 
+
+.header{
+    position: fixed; height: 145px; width: 100%; top: 0; background-color: #fff;
+    box-shadow: 0 3px 5px 1px rgba(0,0,0,0.3);  z-index: 998;
 }
-.box-header .form-search{
-    width: 592px; height: 52px; border: 2px solid #2c47dc; border-radius: 5px;
-    
+.header .head-box{
+width: 1190px; margin: 0 auto; height: 100%;
+    position: relative;
 }
-.box-header .input-search{
-    width: 500px; height: 24px; padding: 13px 15px; margin: 1px; background-color: #fff; font-size: 18px; line-height: 24px; 
-    color: #000; font-weight: bold; outline: 0; border: 0;
+
+.header .head-box .main-icon-box{
+float: left; width: 380px; background-color: #fff; margin-top: 20px; height: 75px; text-align: center;
+
 }
-.box-header .btn-search{
-    position: absolute; top: 0; right: 0; bottom: 0; width: 56px; background-color: #2c47dc;
-    border: 0; outline: 0; border-radius: 0 5px 5px 0; cursor: pointer; height: 54px;
+
+.head-box .search-containerbox .search{
+width: 560px; height: 50px; border: 1px solid black; background-color:#eef0f2;
+font-size: 15px; float: left;  padding: 0 5px;
 }
-.box-header .icon-search{
-    width: 22px; height: 22px; display: inline-block; vertical-align: top;
-    color: #fff;
+.header .head-box .search-containerbox{
+float: left; background-color: #fff; height: 100px; 
+
 }
-/* 아이콘 박스 */
-.box-header .header-icon-box{ 
-    height: 100%; float: right; width: 200px;
+.head-box .search-containerbox .search-box{
+position: relative; border-radius: 10px;
+float: right; width: 580px; padding-top: 25px;
 }
-/* 맵 아이콘 */
-.header-icon-box .box-map{
-    /* position: relative;  width: 100px; */
-    width: 100px; float: left; text-align: center; line-height: 20px; padding-top: 25px;
+.head-box .search-containerbox .search-box>*{
+border-radius: 10px;
 }
-.header-icon-box .box-map .link-map{
-    overflow: hidden;
+.head-box .search-containerbox .search-box .btn-search{
+width: 50px; height: 50px; position: absolute; border: none; 
+top: 25px; right: 10px; bottom: 0; cursor: pointer; padding: 0; outline: 0;
+font-size: 30px;line-height: 50px; color: black; text-align: center;
 }
-.header-icon-box .box-map .icon-map{
-    width: 45px; height: 45px; color: #2c47dc;
+.header .head-box .main-menu-box{
+width: 100%; 
 }
-.header-icon-box .box-map .icon-map:visited{
-    color: #2c47dc;
+.head-box .main-menu-box .list-menu{
+width: 100%; height: 45px; max-width: 1190px; margin: 0 auto; display: flex;
 }
-/* 마이페이지 아이콘 */
-.header-icon-box .box-user{
-    /* position: absolute; top: 35%;  */
-    width: 100px; float: left; text-align: center; line-height: 20px; padding-top: 25px;
+.head-box .main-menu-box .item-menu{
+display: flex; justify-content: space-around; width: 100%; height: 100%; background-color: #fff;
+align-items: center;
 }
-.header-icon-box .box-user .link-user{
-    overflow: hidden;
+.head-box .main-menu-box .link-menu{
+display: flex; align-items: center; color: #000;
+font-family: "SF Pro KR", "SF Pro Display", "SF Pro Icons", -apple-system, BlinkMacSystemFont, "Noto Sans KR", "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-.header-icon-box .box-user .icon-user{
-    width: 45px; height: 45px; color: #2c47dc; float: left;
+.head-box .main-menu-box .icon-menu{
+width: 30px; height: 30px;
 }
-.box-header .box-user .icon-user:visited{
-    color: #8c8fa0;
+.head-box .main-menu-box .item-menu:hover{
+border-bottom: 5px solid #0a97cd;
 }
+
+/* 메인 메뉴바 끝 */
+.search-containerbox .search-keyword{
+position: absolute; right: 217.5px; top: 85px; width: 570px; border: 1px solid #666; background: #fff;
+border-radius: 10px; z-index: 999; text-align: left; display: none; 
+}
+.search-containerbox .search-keyword h2{
+height: 33px; line-height: 33px; margin-top: 20px; padding: 0 28px; font-weight: 800; 
+font-size: 20px; color: #333; letter-spacing: -0.5px;
+}
+.search-containerbox .search-keyword .list-search{
+float: left; width: 50%; padding-bottom: 32px;
+}
+.search-containerbox .search-keyword .list-search .item-search{
+margin-top: 20px; padding-left: 28px;
+}
+.search-containerbox .search-keyword .num{
+float: left; width: 20px; height: 20px; background: #666; border-radius: 3px; color: #fff;
+font-size: 13px; text-align: center; vertical-align: middle;
+}
+.search-containerbox .search-keyword .link-search{
+overflow: hidden;line-height: 20px; margin-left: 10px; color: #333;
+font-size: 15px; font-weight: 700;text-overflow: ellipsis; white-space: nowrap;
+}
+.search-containerbox .search-keyword .list-search+.list-search .link-search{
+font-weight: 400; color: #666;
+}
+.search-containerbox .search-keyword .list-search+.list-search .num{
+background: #949494;
+}
+.search-containerbox .search-keyword .close-keyword{
+width: 100%; overflow: hidden; height: 33px; background: #eef0f2; text-align: right;
+border-radius: 0 0 10px 10px;
+}
+.search-containerbox .search-keyword button{
+padding: 0 20px; line-height: 33px; font-size: 14px; color: #333; border-radius: 0 0 10px 0;
+border: 0 none; cursor: pointer;
+}
+/* 서치바 클릭 박스 */
+
+.head-box .box-quickMenu{
+float: right; width: 210px; background-color: #fff; height: 100px;
+}
+.head-box .box-quickMenu .box-menu{
+width: 70px; float: left; text-align: center; line-height: 20px; padding-top: 30px;
+}
+
+.box-quickMenu .box-menu .btn-quick i{
+font-size: 30px; color: #000;
+}
+.box-quickMenu .box-menu .text-quick{
+display: block; font-size: 8px; color: #000;
+font-family: "SF Pro KR", "SF Pro Display", "SF Pro Icons", -apple-system, BlinkMacSystemFont, "Noto Sans KR", "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* 메뉴바 우측 아이콘 */
+
+
 /* 내용 */
 .container-body{
     width: 1190px; margin: 0 auto; 
@@ -245,12 +302,13 @@ ul, li{
     right: 30px; left: auto; top: 30; height: 35px; line-height: 33px; border-radius: 50px; width: 65px; color: #fff;
     background: rgba(0, 0, 0, 0.5); font-size: 16px; letter-spacing: -1px;
 }
-.contents-detail .photo-gallery .swiper-btn-next,
-.contents-detail .photo-gallery .swiper-btn-prev{
+.contents-detail .photo-gallery .btn-next,
+.contents-detail .photo-gallery .btn-prev{
     width: 40px; height: 40px; margin-top: -20px; position: absolute;
-    top: 50%;
+    top: 50%; z-index: 1;
 }
 
+/*
 .contents-detail .photo-gallery .swiper-btn-next{
     background: url(https://korean.visitkorea.or.kr/resources/images/sub/btn_photo_next.png) 0 0 /100% 100% no-repeat;
     right: 60px; 
@@ -259,7 +317,7 @@ ul, li{
     background: url(https://korean.visitkorea.or.kr/resources/images/sub/btn_photo_prev.png) 0 0 /100% 100% no-repeat;
     left: 60px;
 }
-
+*/
 /* 상세정보 */
 .contents .detail-view .detail-title{
     position: relative; width: 100%; margin-top: 24px;
@@ -288,7 +346,7 @@ ul, li{
  position: relative; padding-bottom: 0 !important; padding-top: 33px;
 }
 .contents .detail-view .detail-text .inner-detail{
-    overflow: hidden; height: 150px;
+    height: 150px;
 }
 .contents .detail-view .detail-text .inner-text-area{
     border-bottom: 0; padding-bottom: 0;
@@ -312,6 +370,71 @@ ul, li{
     content: '+'; width: auto; height: auto; font-size: 16px;
     font-weight: 700; background: none; margin: 0 0 0 5px; color: #333;
 
+}
+
+/* 지도 */
+.contents .map-box{
+    margin-top: 35px; padding: 0 0 13px;
+}
+.map-box .wrap-map{
+    overflow: hidden; position: relative; width: 100%; height: 500px;
+}
+.contents .map-box .wrap-map{
+    height: 300px; border: 1px solid #e6e6e6;
+}
+
+/* 주소 상세 설명 */
+.contents .map-info{
+    position: relative; width: 100%; margin-top: 24px;
+}
+.contents .map-info .area-textView{
+    position: relative; padding-bottom: 0 !important;
+}
+.contents .map-info .inner-wrap{
+    overflow: visible; height: auto;
+}
+.contents .map-info .inner-wrap .inner::after{
+    content: ''; display: block; clear: both;
+}
+.contents .map-info .inner-wrap ul li{
+    float: left; width: 50%; padding: 3px 0 6px 0;
+    display: table; font-size: 15px; font-weight: 400; background: none !important;
+}
+.contents .map-info .inner-wrap ul li > strong{
+    float: left; width: 26%; margin-right: 4%; font-size: 15px;
+    color: #333; font-weight: normal;
+}
+.contents .map-info .inner-wrap ul li strong{
+    float: none; margin-right: 0; position: relative; display: table-cell;
+    width: 128px; padding: 0 0 0 12px; font-weight: bold; color: #333;
+}
+.contents .map-info .inner-wrap ul li strong::before{
+    content: ''; display: inline-block; width: 3px; height: 3px; background: #0b0b0b;
+    border-radius: 100%; position: absolute; left: 0; top: 9px;
+}
+.contents .map-info .inner-wrap ul li span{
+    float: none; width: auto; display: table-cell; color: #666; padding-right: 20px; line-height: 1.4;
+}
+/* 태그 */
+.contents .tag-area{
+    overflow: hidden; position: relative; width: 1190px; margin: 30px auto 0;
+}
+.contents .tag-area .inner-tag{
+    overflow: hidden; height: 50px;
+}
+.contents .tag-area .inner-tag ul{
+    margin-left: -10px;
+}
+.contents .tag-area .inner-tag ul li{
+    margin: 0 0 0 10px; float: left;
+}
+.contents .tag-area .inner-tag ul li a{
+    display: inline-block; overflow: hidden; background: #fff; text-align: center;
+    font-size: 16px; font-weight: 400; color: #777; border: 1px solid #d8d7d7;
+    border-radius: 5px;
+}
+.contents .tag-area .inner-tag ul li a span{
+    display: inline-block; height: 38px; line-height: 38px; padding: 0 20px;
 }
 /* 푸터 */
 footer{
