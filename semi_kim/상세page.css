@@ -348,6 +348,32 @@ a{
 .swiper-button-prev.swiper-button-disabled{
   opacity: 0;
 }
+.best-search .best-search-link .item-box{
+  height: 130px; padding: 10px 16px 16px; position: relative;
+}
+.best-search .best-search-link .item-box .item-category{
+  color: #848c94; font-size: 12px; overflow: hidden; display: block;
+}
+.best-search .best-search-link .item-box .item-name{
+  color: #343a40; font-weight: 600; width: 100%; font-size: 15px;
+}
+.best-search .best-search-link .item-box .item-foot-box{
+  position: absolute; bottom: 10px; width: 250px;
+}
+.best-search-link .item-box .item-foot-box .foot-basket{
+  float: left;
+}
+.best-search-link .item-box .item-foot-box .foot-price{
+  color: #000; right: 0; float: right;
+}
+/* .item-box .item-foot-box .foot-basket .btn-basket{
+  background-color: #fff; border: 1px solid #0a97cd; z-index: 997;
+  font-size: 20px; height: 100%; outline: none; display: block;
+} */
+.item-box .item-foot-box .foot-price span{
+  display: block; float: left;
+}
+
 
 
 
