@@ -361,15 +361,16 @@ a{
   position: absolute; bottom: 10px; width: 250px;
 }
 .best-search-link .item-box .item-foot-box .foot-basket{
-  float: left;
+  float: left; z-index: 997; margin-top: 15px;
+  
 }
 .best-search-link .item-box .item-foot-box .foot-price{
   color: #000; right: 0; float: right;
 }
-/* .item-box .item-foot-box .foot-basket .btn-basket{
-  background-color: #fff; border: 1px solid #0a97cd; z-index: 997;
-  font-size: 20px; height: 100%; outline: none; display: block;
-} */
+.item-box .item-foot-box .foot-basket .btn-basket{
+ border: 0; background-color: rgb(207, 122, 10); border-radius: 5px; 
+ font-size: 15px; height: 100%; outline: none; display: block; 
+}
 .item-box .item-foot-box .foot-price span{
   display: block; float: left;
 }
