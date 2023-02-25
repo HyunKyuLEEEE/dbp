@@ -427,6 +427,138 @@ font-family: "SF Pro KR", "SF Pro Display", "SF Pro Icons", -apple-system, Blink
 .contents .tag-area .inner-tag ul li a span{
     display: inline-block; height: 38px; line-height: 38px; padding: 0 20px;
 }
+/* 리뷰댓글 */
+.contents .reply-area .title-reply{
+    float: none; padding: 4px 0 12px 0; margin: 40px 0 0; font-size: 24px; font-weight: 800;
+    background: none; letter-spacing: -1px; color: #333;
+}
+.contents .reply-area .reply-write{
+    position: relative; background: #f7f7f7; border: 1px solid #e5e5e5;
+    margin: 0; padding: 14px 0;
+}
+.contents .reply-area .reply-write::after{
+    content: ''; display: block; clear: both;
+}
+.reply-write .form{
+    float: right; margin: 14px 20px 0 0;
+}
+.contents .reply-area .reply-write .form{
+    float: none; margin: 0 20px;
+}
+.contents .reply-area .reply-write .write-form{
+    display: block; height: 88px; position: relative;
+}
+.contents .reply-area .reply-write .form textarea{
+    width: 100%; float: none; padding: 15px 20px 15px 20px;
+    font-size: 16px; box-sizing: border-box; height: 80px; line-height: 20px;
+    border: 1px solid #e5e5e5; resize: none;
+}
+.contents .reply-area .btn-fileReg-wrap{
+    text-align: right; padding: 10px 0 0;
+}
+.contents .reply-area .btn-fileReg-wrap::after{
+    content: ''; display: block; clear: both;
+}
+.contents .reply-area .btn-fileReg-wrap .btn-fileReg{
+    margin: 0; height: 40px; float: right;
+}
+.contents .btn-fileReg{
+    position: relative; display: inline-block; vertical-align: middle;
+}
+.contents .reply-area .btn-fileReg-wrap .btn-fileReg input[type="file"]{
+    width: 54px; height: 40px; position: absolute; padding: 0;
+    clip: rect(0,0,0,0); border: none; 
+}
+.contents .reply-area .btn-fileReg-wrap .btn-fileReg label{
+    width: 54px; height: 40px; background: url(../img/btn_fileReg_file.gif) 0 0 / 100% 100% no-repeat;
+    position: relative;
+    bottom: 24px;
+}
+.btn-fileReg-wrap .btn-fileReg label{
+    display: inline-block; cursor: pointer; font-size: 0; background: url(../img/btn_fileReg_file.gif) 0 0 / 100% 100% no-repeat;
+}
+.contents .reply-area .btn-fileReg-wrap .btn-fileReg .btn-apply{
+    position: relative; display: inline-block; background: #13294b; color: #fff;
+    font-size: 15px; width: 73px; height: 40px; line-height: 40px; text-align: center;
+    margin-left: 8px; vertical-align: middle;
+}
+.contents .reply-area .wrap-reply{
+    min-height: auto;
+}
+.contents .reply-area .wrap-reply .list-reply{
+    width: 100%;
+}
+.contents .reply-area .wrap-reply .list-reply>ul>li{
+    position: relative; width: 100%; padding: 20px 10px; border-bottom: 1px solid #e6e6e6;
+    box-sizing: border-box;
+}
+.contents .reply-area .wrap-reply .list-reply>ul>li::after{
+    content: "."; display: block; height: 0; clear: both; visibility: hidden;
+}
+.contents .reply-area .wrap-reply .list-reply .profile{
+    position: relative; float: left; width: 50px; height: 50px;
+}
+.contents .reply-area .wrap-reply .list-reply .profile .photo{
+    width: 50px; height: 50px; border-radius: 100%; background-position: 50% 50%;
+    background-size: cover; background-repeat: no-repeat;
+}
+.contents .reply-area .wrap-reply .list-reply .text-reply{
+    width: 1060px; float: left; padding-left: 20px;
+}
+.contents .reply-area .wrap-reply .list-reply .text-reply p{
+    padding-bottom: 5px; font-size: 16px; color: #333; word-break: break-all;
+    padding-right: 23px;
+}
+.contents .reply-area .wrap-reply .list-reply .text-reply .date{
+    color: #333; font-size: 14px;
+}
+.contents .reply-area .wrap-reply .list-reply .text-reply .name{
+    line-height: 18px; background: url(../img/line_tit.png) 100% 5px no-repeat; color: #333; display: inline-block;
+    vertical-align: top; padding-right: 10px; margin-right: 7px;
+}
+.contents .reply-area .wrap-reply .list-reply .text-reply span{
+    line-height: 18px; display: inline-block; vertical-align: top; color: #707070;
+}
+.contents .reply-area .wrap-reply .list-reply .replyBtn{
+    display: block; clear: both; padding: 17px 0 0 70px;
+}
+.contents .reply-area .wrap-reply .list-reply .replyBtn button{
+    width: 69px; height: 28px; line-height: 26px; border: 1px solid #e5e5e5; 
+    color: #0a97cd; font-size: 15px; text-align: center; background: #fff;
+}
+.contents .reply-area .wrap-reply .list-reply .replyBtn button.btn1::before{
+    width: 17px; height: 15px; background: url(../img/btn_reply_01.png) no-repeat;
+}
+.contents .reply-area .wrap-reply .list-reply .replyBtn button::before{
+    content: ''; display: inline-block; vertical-align: -2px;
+}
+.contents .reply-area .wrap-reply .list-reply .replyBtn button span{
+    display: inline-block; margin-left: 4px;
+}
+.list-reply .replyBtn button+button{
+    margin-left: 2px;
+}
+.contents .reply-area .wrap-reply .list-reply .replyBtn button.btn2::before{
+    width: 18px; height: 16px; vertical-align: -4px; background: url(../img/btn_reply_02.png) no-repeat;
+}
+.contents .reply-area .wrap-reply .list-reply .btn-report{
+    position: absolute; right: 20px; top: 21px;
+}
+.contents .reply-area .wrap-reply .list-reply .btn-report button{
+    text-indent: -9999px; width: 17px; height: 18px;
+    background: url(../img/btn_reply_report.png) no-repeat;
+}
+.contents .reply-area .wrap-reply .list-reply .btn-center{
+    text-align: center;
+}
+.contents .reply-area .wrap-reply .list-reply .btn-more{
+    border: 0; margin-top: 5px; display: inline-block; width: 150px;
+    padding: 10px 10px; text-align: center; font-size: 16px; color: #000;
+}
+.contents .reply-area .wrap-reply .list-reply .btn-more::after{
+    content: '+'; width: auto; height: auto; font-size: 16px; font-weight: bold;
+    background: none; margin: 0 0 0 5px; color: #333;
+}
 /* 푸터 */
 footer{
     width: 100%; margin-top: 60px; padding-bottom: 10px; background: #f7f7f7;

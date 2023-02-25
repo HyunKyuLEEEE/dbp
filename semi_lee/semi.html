@@ -11,6 +11,7 @@
 	<link rel="stylesheet" href="css/swiper.min.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous"></link>
 	<link rel="stylesheet" href="css/semi.css">
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=b7f6808d24078c59ace53b7dfc41e8fa"></script>
 </head> 
 <body>
     <div class="header">
@@ -104,6 +105,8 @@
 			</div>
 		</div>
 	</div>
+    <div class="empty" style="width: 100%; height: 145px;"></div>
+
     <div class="container-body clearfix">
         <div class="contents">
             <div class="title">
@@ -223,7 +226,8 @@
             </div>
             <div class="map-box">
                 <div class="wrap-map">
-                    <!-- 추후 추가 예정 카카오맵 api가 필요함 -->
+                    <!-- 추후 추가 예정 카카오맵 api 권한 필요함 -->
+                    <div id="map" style="width:1150px;height:300px;"></div>
                 </div>
             </div>
             <div class="map-info">
@@ -270,7 +274,58 @@
                 </div>
             </div>
             <div class="reply-area">
-                
+                <div class="reply-wrap">
+                    <h3 class="title-reply">여행리뷰</h3>
+                    <div class="reply-write">
+                        <div class="form">
+                            <div class="tform">
+                                <span class="write-form">
+                                    <textarea placeholder="로그인 후 소중한 댓글을 남겨주세요." id="comment" cols onkeydown="commentresize(this)" readonly="readonly"></textarea>
+                                </span>
+                                <div class="btn-fileReg-wrap">
+                                    <span class="btn-fileReg">
+                                        <input type="file" id="fileUp" multiple onchange="fileChange(this)" disabled="disabled">
+                                        <label for="fileUp" class="btn-fileUp">파일찾기</label>
+                                        <a href="#" class="btn-apply">로그인</a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wrap-reply">
+                        <div class="list-reply">
+                            <ul>
+                                <li>
+                                    <div class="profile">
+                                        <div class="photo" style="background-image: url(/semi_lee/img/ico_profile.png);"></div>
+                                    </div>
+                                    <div class="text-reply">
+                                        <p>봄에 제주여행을 계획하고 있다. 올레길과 오름에 관심이 많아 찾아 걷고 있다. 이곳도 방문해보고 싶다.</p>
+                                        <div class="date">
+                                            <em class="name">이*</em>
+                                            <span>2020-02-07</span>
+                                        </div>
+                                    </div>
+                                    <div class="replyBtn">
+                                        <button class="btn1">
+                                            <span>0</span>
+                                        </button>
+                                        <button class="btn2">
+                                            <span>0</span>
+                                        </button>
+                                    </div>
+                                    <span class="btn-report">
+                                        <button>신고하기</button>
+                                    </span>
+                                </li>
+                                <div class="btn-center">
+                                    <a href="#" class="btn-more">댓글 더보기</a>
+                                </div>
+                            </ul>
+                            
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -355,6 +410,14 @@
                 delay: 3000, 
             }, 
         }); 
+
+        var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
+        var options = { //지도를 생성할 때 필요한 기본 옵션
+            center: new kakao.maps.LatLng(33.450701, 126.570667), //지도의 중심좌표.
+            level: 3 //지도의 레벨(확대, 축소 정도)
+        };
+
+        var map = new kakao.maps.Map(container, options); //지도 생성 및 객체 리턴
        
     </script>
 </body>
