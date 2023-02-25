@@ -81,7 +81,7 @@ a{
 
 /* 메인 메뉴바 끝 */
 .search-containerbox .search-keyword{
-  position: absolute; right: 217.5px; top: 85px; width: 570px; border: 1px solid #666; background: #fff;
+  position: absolute; right: 235.5px; top: 85px; width: 570px; border: 1px solid #666; background: #fff;
   border-radius: 10px; z-index: 999; text-align: left; display: none; 
 }
 .search-containerbox .search-keyword h2{
@@ -281,7 +281,7 @@ a{
   background: url(http://cdn.visitkorea.or.kr/resources/images/sub/bg_dim.png) 0 0 repeat;
 }
 .best-content .item-best:hover{
-  box-shadow: 0 2px 8px hsl(212deg 7% 43% / 32%); transform: translateY(-2px); border-radius: 10px 10px;
+  box-shadow: 0 2px 8px hsl(212deg 7% 43% / 32%); transform: translateY(-2px);
 }
 .admin-pick .best-top .table-best,
 .contents-region .best-top .table-best{
@@ -321,20 +321,23 @@ a{
   padding-top: 35px; position: relative; width: 1190px; overflow: hidden;
 }
 .content-box .best-search .best-search-container{
-  height: 100%; width: 100%; margin-top: 35px;
+  height: 100%; width: 100%; margin-top: 35px; 
 }
 .content-box .best-search .best-search-link::after{
   border-radius: 4px; box-shadow: inset 0 0 0 1px rgb(0 0 0 / 16%); content: '';
   height: 100%; left: 0; position: absolute; top: 0; width: 100%; overflow: hidden;
 }
 .content-box .best-search .best-search-link{
-  margin-right: 20px; width: 282.5px !important;
+  margin-right: 20px; width: 282.5px !important; border-radius: 5px;
+}
+.content-box .best-search .best-search-link:hover{
+  transform: translateY(-2px);
 }
 .content-box .best-search .best-search-link:last-child{
   margin-right: 0;
 }
 .content-box .best-search .best-search-box img{
-  height: 166px; width: 100%; 
+  height: 166px; width: 100%; border-radius: 5px 5px 0 0;
 }
 .best-search-container .btn-prev,
 .best-search-container .btn-next{
