@@ -75,7 +75,7 @@
 			</div>
 			<div class="box-quickMenu clearfix">
 				<div class="box-menu">
-					<a href="#" class="btn-quick"><i class="fas fa-map-marked-alt"></i></i>
+					<a href="#" class="btn-quick"><i class="fas fa-map-marked-alt"></i>
 					<span class="text-quick">여행지도</span>
 					</a>
 				</div>
@@ -168,7 +168,7 @@
                         </li>
                         <li class="select-tab">
                             <a href="#">
-                                <span>여행톡</span>
+                                <span>여행리뷰</span>
                             </a>
                         </li>
                         <li class="select-tab">
@@ -204,10 +204,27 @@
                     </div>
                 </div>
             </div>
+            <div class="price-area">
+                <div class="detail-price">
+                    <h3></h3>
+                </div>
+            </div>
+            <div class="pay-area">
+                <div class="check-area">
+                    <button class="btn-check">찜하기</button>
+                </div>
+                <div class="add-course">
+                    <button class="btn-course">코스 추가</button>
+                </div>
+                <div class="shoppingbag-area">
+                    <button class="btn-shoppingbag">장바구니 추가</button>
+                </div>
+            </div>
+            <div class="empty" style="width: 100%; height: 50px;"></div>
             <div class="detail-view">
                 <div class="detail-title">
                     <h3>상세정보</h3>
-                    <button class="btn-modify"><span>관광정보 수정요청</span></button>
+                    <button class="btn-modify"><span>상품정보 수정</span></button>
                 </div>
                 <div class="detail-text" style="padding-bottom: 54px;">
                     <div class="inner-detail" style="height: 160px;">
@@ -392,6 +409,14 @@
                 }
              })
              */
+            $('.search').focus(function(){
+                $(this).css('background-color','#fff')
+                $('.search-keyword').css('display','block')
+            })
+            $('.search').blur(function(){
+                $(this).css('background-color','rgba(0,0,0,0.1)')
+                $('.search-keyword').css('display','none')
+            })
              
             var mySwiper = new Swiper('.swiper-container', { 
             navigation: { 
