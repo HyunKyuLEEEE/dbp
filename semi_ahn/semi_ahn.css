@@ -29,45 +29,22 @@ a{
     
     
 }
-.main-banner-box .btn-next,
-.main-banner-box .btn-prev,
-.main-special .btn-next,
-.main-special .btn-prev{
+
+.main-banner-box h1{
     position: absolute;
-    top: calc(50%);
+    top: 100px;
+    left: 37%;
     z-index: 10;
-    border: none;
-    background-color: #666;
-    font-size: 40px;
-    opacity: 0.7;
-    cursor: pointer;
-    width: 60px;
-    height: 60px;
-    border-radius: 100%;
+    font-size: 120px;
+    color: #d4ebd4;
 }
 
-.main-special .btn-next,
-.main-special .btn-prev{
-    top: 230px;
-    width: 45px;
-    height: 45px;
-    font-size: 20px;
-    text-align: center;
-}
-.main-banner-box .btn-next:hover,
-.main-banner-box .btn-prev:hover,
-.main-special .btn-next:hover,
-.main-special .btn-prev:hover{
-    opacity: 1;
-}
-.main-banner-box .btn-next,
-.main-special .btn-next{
-    right: 0;
-}
+
+
 .main-banner-box .banner-link{
     display: block;
     width: 100%;
-    height: 100%;
+    height: 500px;
     position: relative;
 }
 .main-banner-box .banner-link img{
@@ -96,19 +73,169 @@ a{
     transition: all 4s linear;
 }
 .main-banner-box .swiper-slide:hover img{
-  transform: scale(1.2);
+  transform: scale(1.1);
   }
 
+/*메인 초이스박스*/
+.main-choice{
+    height: 500px;
+    width: 100%;
+    box-shadow: 3px 3px 3px #dae1e6;
+    border: 2px solid #dae1e6;
+    margin-top: 10px;
+    border-top: none;
+   
+}
+.main-choice .choice-box{
+    width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px 0;
+    height: 100%;
+    box-sizing: border-box;
+    position: relative;
+}
 
+.main-choice .choice-box img
+{
+    height: 100px;
+}
+.choice-left{
+    width: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+}
+.choice-left .swiper {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    margin-left: -7px;
+    margin-top: 20px;
+    position: relative;
+}
+
+ .choice-left .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    position: relative;
+  }
+
+  .choice-left .swiper-slide a span{
+    position: absolute;
+    left: 42%;
+    font-size: 22px;
+    font-weight: bold;
+    color: #697075;
+    border: 2px solid #dae1e6;
+    margin-top: 10px;
+    border-radius: 15px;
+    width: 100px;
+    text-align: center;
+
+  }
+
+ .choice-left .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 250px;
+    border-radius: 20px;
+    border: 2px solid #dae1e6;
+  }
+
+.btn-box{
+    display: flex;
+    margin-left: -20px;
+}
+.choice-btn{
+    width: 30%;
+    border-radius: 15px;
+    text-align: center;
+    margin: 3px;
+    float: left;
+    width: 165px;
+    font-size: 18px;
+    color: #5b6164c0;
+    background-color: white;
+    border-radius: 50px;
+    margin-left: 20px;
+    padding: 7px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+    border: 2px solid #dae1e6;
+}
+.choice-right{
+    width: 50%;
+    height: 80%;
+    padding: 10px;
+    position: absolute;
+    right: -50px;
+    top: 20px;
+    
+}
+.daily-list{
+display: flex;
+height: 90%;
+position: relative;
+margin-top: 10px;
+}
+.daily-item{
+    border: 3px solid #dae1e6;
+    width: 33.33%;
+    height: 47%;
+    position: absolute;
+    border-radius: 15px;
+}
+.daily-item:nth-child(2n-1){
+    top: 0;
+}.daily-item:nth-child(3), .daily-item:nth-child(4){
+    left: 200px;
+}.daily-item:nth-child(5), .daily-item:nth-child(6){
+    left: 400px;
+}
+.daily-item:nth-child(2n){
+    bottom: 0;
+}
+.daily-item .choice-item{
+width: 100%;
+height: 100%;
+display: inline-block;
+position: relative;
+}
+.daily-item .choice-item img {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+}
+.daily-item .choice-item span{
+    position: absolute;
+    bottom: 0;
+    left: 40%;
+    z-index: 10;
+    font-weight: bold;
+    color: white;
+}
+
+.daily-service{
+    float: right;
+    margin-top: 4px;
+}
+.daily-service > span >a{
+    font-weight: bold;
+    margin-left: 20px;
+    color: #6b7175;
+}
 
 
 /* 메인 큐레이션 */
 .main-curation-area{
     margin-top: -4.5px;
     width: 100%;
-    height: 430px;
-    background-color: #F0F2F7;
+    height: 510px;
     padding-bottom: 50px;
+    box-shadow: 4px 4px 4px #dae1e6;
+    background-color: #d4ebd4;
 }
 
 .main-curation-area h2{
@@ -131,13 +258,17 @@ a{
     width: 200px;
     position: relative;
 }
-.curation-box .curation-tab >li > a:hover{
+.curation-box .curation-tab >li > a{
+    border: 1px solid #dae1e6;
+}
+.curation-box .curation-tab >li > a:hover,
+.choice-btn:hover{
     background-color: rgb(61, 61, 223);
     color: white;
 }
 .curation-box .curation-tab .curation-content{
 margin-left: 20px;
-margin-top: 20px;
+margin-top: -5px;
 box-sizing: border-box;
 word-break: keep-all;
 padding: 8px 0 0 8px;
@@ -149,6 +280,9 @@ letter-spacing: -0.7px;
 display: none;
 }
 .curation-box .curation-tab .pointon{
+    display: inline-block;
+}
+.curation-box .curation-tab .pointon2{
     display: block;
 }
 .curation-box .curation-tab >li >a{
@@ -209,10 +343,10 @@ display: none;
     z-index: 5;
 }
 .inner2{
-    top :  -50px !important;
+    top :  -62px !important;
 }
 .inner3{
-    top : -110px !important;
+    top : -124px !important;
 }
 .curation-inner{
     position: absolute;
@@ -442,4 +576,20 @@ display: none;
     color: #fff;
     z-index: 10;
     line-height: 21px;
+}
+.choice-hover{
+    position: absolute;
+    right: 0;
+}
+
+.choice-hover a{
+    display: block;
+    border-bottom: #A0DD9F;
+    width: 150px;
+    text-align: center;
+    line-height: 20px;
+    margin: 5px;
+}
+.choice-hover a+a{
+    border-top: none;
 }

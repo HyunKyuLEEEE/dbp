@@ -10,21 +10,270 @@
     <script src="./semi_ahn.js"></script>
     <script src="./semi_ahn_tool/Jquery/js/jquery.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
-  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js">
+
+  </script><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous"></link>
+	
 
   <style>
+/* 푸터 */
+footer{
+    width: 100%; margin-top: 60px; padding-bottom: 10px; background: #f7f7f7;
+    box-sizing: border-box;
+}
+footer .box-footer{
+    width: 1190px; margin: 0 auto;
+}
+footer .box-footer .footer-data{
+    padding: 20px 0; border-top: 1px solid #e6e6e6; position: relative;
+}
+footer .box-footer .footer-data::after{
+    content: ''; display: block; clear: both;
+}
+footer .box-footer .footer-data .footer-menu{
+    width: 100%; padding-top: 10px; overflow: hidden;
+}
+footer .footer-data .footer-menu li{
+    float: left; line-height: 30px;
+}
+footer .footer-data .footer-menu li:first-child{
+    padding-left: 2px;
+}
+footer .footer-data .footer-menu a{
+    margin-right: 30px; color: #666; font-size: 13px; letter-spacing: -0.25px;
+}
+footer .footer-data .footer-menu a.personal-info{
+    color: #2c47dc; font-weight: bold;
+}
+footer .footer-data .footer-address{
+    clear: both; padding-top: 6px;
+}
+footer .footer-data .footer-address li{
+    display: inline-block; margin-right: 5px; line-height: 1.8; color: #666; font-size: 13px;
+}
+footer .footer-data .footer-address li>span{
+    padding-right: 10px;
+}
+
+
+		.header{
+  position: fixed; height: 145px; width: 100%; top: 0; background-color: #fff;
+  box-shadow: 0 3px 5px 1px rgba(0,0,0,0.3);  z-index: 998;
+  
+}
+.header .head-box{
+  width: 1190px; margin: 0 auto; height: 100%;
+    position: relative;
+}
+
+.header .head-box .main-icon-box{
+  float: left; width: 380px; background-color: #fff; margin-top: 20px; height: 75px; text-align: center;
+  
+}
+
+.head-box .search-containerbox .search{
+  width: 560px; height: 50px; border: 1px solid black; background-color:#eef0f2;
+  font-size: 15px; float: left;  padding: 0 5px;
+}
+.header .head-box .search-containerbox{
+  float: left; background-color: #fff; height: 100px; 
+  
+}
+.head-box .search-containerbox .search-box{
+  position: relative; border-radius: 10px;
+  float: right; width: 580px; padding-top: 25px;
+}
+.head-box .search-containerbox .search-box>*{
+  border-radius: 10px;
+}
+.head-box .search-containerbox .search-box .btn-search{
+  width: 50px; height: 50px; position: absolute; border: none; 
+  top: 25px; right: 10px; bottom: 0; cursor: pointer; padding: 0; outline: 0;
+  font-size: 30px;line-height: 50px; color: black; text-align: center;
+}
+.header .head-box .main-menu-box{
+  width: 100%; 
+}
+.head-box .main-menu-box .list-menu{
+  width: 100%; height: 45px; max-width: 1190px; margin: 0 auto; display: flex;
+}
+.head-box .main-menu-box .item-menu{
+ display: flex; justify-content: space-around; width: 100%; height: 100%; background-color: #fff;
+ align-items: center;
+}
+.head-box .main-menu-box .link-menu{
+  display: flex; align-items: center; color: #000;
+  font-family: "SF Pro KR", "SF Pro Display", "SF Pro Icons", -apple-system, BlinkMacSystemFont, "Noto Sans KR", "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.head-box .main-menu-box .icon-menu{
+  width: 30px; height: 30px;
+}
+.head-box .main-menu-box .item-menu:hover{
+  border-bottom: 5px solid #0a97cd;
+}
+
+/* 메인 메뉴바 끝 */
+.search-containerbox .search-keyword{
+  position: absolute; right: 217.5px; top: 85px; width: 570px; border: 1px solid #666; background: #fff;
+  border-radius: 10px; z-index: 999; text-align: left; display: none; 
+}
+.search-containerbox .search-keyword h2{
+  height: 33px; line-height: 33px; margin-top: 20px; padding: 0 28px; font-weight: 800; 
+  font-size: 20px; color: #333; letter-spacing: -0.5px;
+}
+.search-containerbox .search-keyword .list-search{
+  float: left; width: 50%; padding-bottom: 32px;
+}
+.search-containerbox .search-keyword .list-search .item-search{
+  margin-top: 20px; padding-left: 28px;
+}
+.search-containerbox .search-keyword .num{
+  float: left; width: 20px; height: 20px; background: #666; border-radius: 3px; color: #fff;
+  font-size: 13px; text-align: center; vertical-align: middle;
+}
+.search-containerbox .search-keyword .link-search{
+  overflow: hidden;line-height: 20px; margin-left: 10px; color: #333;
+  font-size: 15px; font-weight: 700;text-overflow: ellipsis; white-space: nowrap;
+}
+.search-containerbox .search-keyword .list-search+.list-search .link-search{
+  font-weight: 400; color: #666;
+}
+.search-containerbox .search-keyword .list-search+.list-search .num{
+  background: #949494;
+}
+.search-containerbox .search-keyword .close-keyword{
+  width: 100%; overflow: hidden; height: 33px; background: #eef0f2; text-align: right;
+  border-radius: 0 0 10px 10px;
+}
+.search-containerbox .search-keyword button{
+  padding: 0 20px; line-height: 33px; font-size: 14px; color: #333; border-radius: 0 0 10px 0;
+  border: 0 none; cursor: pointer;
+}
+/* 서치바 클릭 박스 */
+
+.head-box .box-quickMenu{
+  float: right; width: 210px; background-color: #fff; height: 100px;
+}
+.head-box .box-quickMenu .box-menu{
+  width: 70px; float: left; text-align: center; line-height: 20px; padding-top: 30px;
+}
+
+.box-quickMenu .box-menu .btn-quick i{
+  font-size: 30px; color: #000;
+}
+.box-quickMenu .box-menu .text-quick{
+  display: block; font-size: 8px; color: #000;
+  font-family: "SF Pro KR", "SF Pro Display", "SF Pro Icons", -apple-system, BlinkMacSystemFont, "Noto Sans KR", "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
 
   </style>
 </head>
 <body>
+    <!-- 헤더 -->
+	<div class="header">
+		<div class="head-box clearfix">
+			<!-- 	<div class="menu-box">
+				<button class="btn-menu"><i class="fas fa-bars"></i></button>
+			</div> -->
+			<div class="main-icon-box"><a href="#"><img src="../semi_kim/img/logo.png" alt="#"></a></div>
+			<div class="search-containerbox clearfix">
+				<div class="search-box clearfix">
+					<input type="text" placeholder="여행을 떠나요" class="search">
+					<a href="#" class="btn-search"><i class="fas fa-search"></i></a>
+				</div>
+				<div class="search-keyword">
+					<h2>어제의 인기 검색어</h2>
+					<ul class="list-search">
+						<li class="item-search clearfix">
+							<span class="num">1</span>
+							<a href="#" class="link-search">서울</a>
+						</li>
+						<li class="item-search">
+							<span class="num">2</span>
+							<a href="#" class="link-search">부산</a>
+						</li>
+						<li class="item-search">
+							<span class="num">3</span>
+							<a href="#" class="link-search">겨울여행</a>
+						</li>
+						<li class="item-search">
+							<span class="num">4</span>
+							<a href="#" class="link-search">속초</a>
+						</li>
+						<li class="item-search">
+							<span class="num">5</span>
+							<a href="#" class="link-search">여수</a>
+						</li>
+					</ul>
+					<ul class="list-search">
+						<li class="item-search">
+							<span class="num">6</span>
+							<a href="#" class="link-search">경주</a>
+						</li>
+						<li class="item-search">
+							<span class="num">7</span>
+							<a href="#" class="link-search">통영</a>
+						</li>
+						<li class="item-search">
+							<span class="num">8</span>
+							<a href="#" class="link-search">인천</a>
+						</li>
+						<li class="item-search">
+							<span class="num">9</span>
+							<a href="#" class="link-search">제주</a>
+						</li>
+						<li class="item-search">
+							<span class="num">10</span>
+							<a href="#" class="link-search">대전</a>
+						</li>
+					</ul>
+					<div class="close-keyword">
+						<button type="button">닫기</button>
+					</div>
+				</div>
+			</div>
+			<div class="box-quickMenu clearfix">
+				<div class="box-menu">
+					<a href="#" class="btn-quick"><i class="fas fa-map-marked-alt"></i></i>
+					<span class="text-quick">여행지도</span>
+					</a>
+				</div>
+				<div class="box-menu">
+					<a href="#" class="btn-quick"><i class="fas fa-shopping-bag"></i>
+					<span class="text-quick">장바구니</span>
+					</a>
+				</div>
+				<div class="box-menu">
+					<a href="" class="btn-quick"><i class="fas fa-user"></i>
+					<span class="text-quick">마이페이지</span>
+					</a>
+				</div>
+			</div>
+			<div class="main-menu-box">
+				<nav class="list-menu">
+					<div class="item-menu">
+						<a href="#" class="link-menu"><img class= "icon-menu"src="../semi_kim/img/airplane.avif" alt="">여행</a>
+					</div>
+					<div class="item-menu">
+						<a href="#" class="link-menu"><img class= "icon-menu"src="../semi_kim/img/food.png" alt="">음식</a>
+					</div>
+					<div class="item-menu">
+						<a href="#" class="link-menu"><img class= "icon-menu"src="../semi_kim/img/hotel.png" alt="">숙박</a>
+					</div>
+				</nav>
+			</div>
+		</div>
+	</div>
+
+<div class="empty" style="width: 100%; height: 145px;"></div>
     <div class="main-container">
-        <!-- 메인배너링크  1차 완료-->
+        <!-- 메인배너링크 완료-->
         <div class="main-banner-box" >  
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <a href="#" class="banner-link">
-                            <img src="./semi_ahn_img/444fa34d-d8dc-4ad0-ac06-0bcb785fd2fb.raw.png" alt="">
+                            <img src="./semi_ahn_img/main-banner.jpg" alt="">
                         </a>
                     </div>
                     <div class="swiper-slide">
@@ -34,25 +283,26 @@
                     </div>
                     <div class="swiper-slide">
                         <a href="#" class="banner-link">
-                            <img src="./semi_ahn_img/444fa34d-d8dc-4ad0-ac06-0bcb785fd2fb.raw.png" alt="">
+                            <img src="./semi_ahn_img/main-banner.jpg" alt="">
                         </a>
                     </div>
                 </div>
             <div class="swiper-scrollbar"></div>
           </div>
-          <button class="btn-next btn">></button>
-          <button class="btn-prev btn"><</button>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
         </div>
-        <!-- 메인 큐레이션링크 1차완료 -->
+        
+        <!-- 메인 큐레이션링크 완료 -->
         <div class="main-curation-area">
-            <h2> <a class="curation-logo" href=""><img src="./semi_ahn_img/tit_curation_area.png" alt=""></a></h2>
+            <h2> <a class="curation-logo" href="#"><img src="./semi_ahn_img/curation-logo-real.png" alt="" style="width: 50%; height:250px; display: inline-block; margin-top: -180px;" ></a></h2>
             <div class="curation-box">
                 <ul class="curation-tab">
                     <li class="curation-menu clearfix"><a href="#"><span>랜덤 추천 여행지</span></a>
                         <div class="curation-content pointon">
                             <span>관광 빅데이터 정보로 분석한 지역별 핫한 여행지와 맛집을 소개합니다.</span>
                         </div>
-                        <div class="curation-inner inner1 pointon">
+                        <div class="curation-inner inner1 pointon2">
                             <ul class="placelist">
                                 <li class="list-item">
                                     <a href="#">
@@ -62,14 +312,14 @@
                                 </li>
                                 <li class="list-item">
                                     <a href="#">
-                                        <strong>서울 고성막국수</strong>
-                                        <img class="item-img" src="./semi_ahn_img/47519d29-aeeb-40ed-b6ec-c17b550f13e0.progress.jpg" alt="">
+                                        <strong>청춘 뮤지엄</strong>
+                                        <img class="item-img" src="./semi_ahn_img/0fbc4882-60d7-4b28-88cc-593504f8685e.progress.jpg" alt="">
                                     </a>
                                 </li>
                                 <li class="list-item">
                                     <a href="#">
-                                        <strong>서울 고성막국수</strong>
-                                         <img class="item-img" src="./semi_ahn_img/47519d29-aeeb-40ed-b6ec-c17b550f13e0.progress.jpg" alt="">
+                                        <strong>유명한 어딘가</strong>
+                                         <img class="item-img" src="./semi_ahn_img/46c4df2e-0ebe-4298-8bf1-7570863211c9.png" alt="">
                                     </a>
                                 </li>
                             </ul>
@@ -87,14 +337,14 @@
                             <ul class="placelist">
                                 <li class="list-item">
                                     <a href="#">
-                                        <strong>서울 고성막국수2</strong>
-                                        <img class="item-img" src="./semi_ahn_img/47519d29-aeeb-40ed-b6ec-c17b550f13e0.progress.jpg" alt="">
+                                        <strong>선물광고</strong>
+                                        <img class="item-img" src="./semi_ahn_img/ea603ba0-cc83-4348-8289-c2a216dc943d.png" alt="">
                                     </a>
                                 </li>
                                 <li class="list-item">
                                     <a href="#">
-                                        <strong>서울 고성막국수2</strong>
-                                        <img class="item-img" src="./semi_ahn_img/47519d29-aeeb-40ed-b6ec-c17b550f13e0.progress.jpg" alt="">
+                                        <strong>가볼래터</strong>
+                                        <img class="item-img" src="./semi_ahn_img/9a275fa4-3f9e-41ff-b845-8c425352a6e4.raw.png" alt="">
                                     </a>
                                 </li>
                                 <li class="list-item">
@@ -119,13 +369,13 @@
                                 <li class="list-item">
                                     <a href="#">
                                         <strong>서울 고성막국수1</strong>
-                                        <img class="item-img" src="./semi_ahn_img/47519d29-aeeb-40ed-b6ec-c17b550f13e0.progress.jpg" alt="">
+                                        <img class="item-img" src="./semi_ahn_img/dc0fb47e-e59c-49b7-bc89-b87946c25e6e.png" alt="">
                                     </a>
                                 </li>
                                 <li class="list-item">
                                     <a href="#">
-                                        <strong>서울 고성막국수1</strong>
-                                        <img class="item-img" src="./semi_ahn_img/47519d29-aeeb-40ed-b6ec-c17b550f13e0.progress.jpg" alt="">
+                                        <strong>맛좋은 냉면</strong>
+                                        <img class="item-img" src="./semi_ahn_img/8a1012d8-cd9d-4348-89f9-3bd03a6e0572.progress.jpg" alt="">
                                     </a>
                                 </li>
                                 <li class="list-item">
@@ -147,6 +397,127 @@
             </div>
             
         </div>
+        <!-- 메인 콕콕 -->
+        <div class="main-choice">
+            <div class="choice-box clearfix">
+                <div class="choice-left">
+                    <img src="./semi_ahn_img/curation-logo-title.png" alt="">
+                    <div class="btn-box">
+                        <a href="#" class="choice-btn lodging">숙박</a>
+                        <a href="#" class="choice-btn restraunt">식당</a>
+                        <a href="#" class="choice-btn place">명소</a>
+                        
+                    </div>
+                    <div class="swiper mySwiper2 lodging">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="#" class="choice-item">
+                                    <img class="item-img" src="./semi_ahn_img/hotel1.jpg" />
+                                    <span>호텔1</span>                                    
+                                </a>
+
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="choice-item">
+                                    <img class="item-img" src="./semi_ahn_img/hotel2.jpg" />
+                                    <span>호텔2</span>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="choice-item">
+                                    <img class="item-img" src="./semi_ahn_img/hotel3.jpg" />
+                                    <span>호텔3</span>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="choice-item">
+                                    <img class="item-img" src="./semi_ahn_img/hotel4.jpg" />
+                                    <span>호텔4</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                    <div class="swiper mySwiper2 restraunt" style="display: none;">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="">
+                                    <img src="./semi_ahn_img/food1.jpg" />
+                                    <span>식당1</span>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="">
+                                    <img src="./semi_ahn_img/food2.jpg" />
+                                    <span>식당2</span>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="">
+                                    <img src="./semi_ahn_img/food3.jpg" />
+                                    <span>식당3</span>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="">
+                                    <img src="./semi_ahn_img/food4.jpg" />
+                                    <span>식당4</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                    <div class="swiper mySwiper2 place" style="display: none;">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="">
+                                    <img src="./semi_ahn_img/place1.jpg" />
+                                    <span>장소1</span>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="">
+                                    <img src="./semi_ahn_img/place2.jpg" />
+                                    <span>장소2</span>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="">
+                                    <img src="./semi_ahn_img/place3.jpg" />
+                                    <span>장소3</span>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="">
+                                    <img src="./semi_ahn_img/place4.jpg" />
+                                    <span>장소4</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                   
+                </div>
+                
+                <div class="choice-right">
+                    <h3 style=" text-align: center; color: #6b7175;">나만의 코스 정하기</h3>
+                    <ul class="daily-list">
+                        <li class="daily-item item1"></li>
+                        <li class="daily-item item2"></li>
+                        <li class="daily-item item3"></li>
+                        <li class="daily-item item4"></li>
+                        <li class="daily-item item5"></li>
+                        <li class="daily-item item6"></li>
+                    </ul>
+                    <div class="daily-service">
+                        <span class="daily-plus"><a href=""> 저장하기</a></span>
+                        <span class="daily-rst"><a href="">초기화</a></span>
+                        <span class="daily-map"><a href="">지도에서 확인하기</a></span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
         <!-- 메인 스페셜에디션  1차 완료-->
         <div class="main-special" style="height: 560px;">
             <div class="special-inner">
@@ -157,13 +528,13 @@
                         </div>
                         <div class="special-article">
                             <div class="special-arttitle">
-                                <span>오늘의 여행Issue</span>
+                                <span>콕콕 전달 사항</span>
                                <a href="#"> <span class="arttitle-btn"></span></a>
                             </div>
                             <ul class="special-artlist">
                                 <li class="special-artitem">
                                     <a href="#">
-                                        <em style="color: #a2660d;"> 국립나주문화재연구소 |</em> 오랜 연구 성과 담은 전시홍보관 재개관
+                                        <em style="color: #a2660d;"> 3월 불량이용자 발표 |</em>불량이용자 제제 목록입니다
                                     </a>
                                 </li>
                                 <li class="special-artitem">
@@ -270,33 +641,36 @@
                           </div>
 
                         </div>
-                        <button class="btn-next btn">></button>
-                        <button class="btn-prev btn"><</button>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
                 </div>
             </div>
         </div>
         <!-- 메인 테마 1차완료  -->
+       
+        </div>
+        <!-- 메인 테마  -->
         <div class="main-theme-container">
             <div class="theme-inner clearfix">
                 <h2 class="theme-title">함께 떠나는 테마 힐링 여행</h2>
                 <div class="theme-left">
                     <a href="#" class="theme-article">
                         <h3>아이와 추억하는 특별한 여행 <br>경기 수원 박물관 투어</h3>
-                        <img src="./semi_ahn_img/46c4df2e-0ebe-4298-8bf1-7570863211c9.png" alt="">
+                        <img src="./semi_ahn_img/e9ff7f9f-99ce-41b8-a0b6-4f3143d0c6b8.png" alt="">
                     </a>
                     <a href="#" class="theme-article">
-                        <h3>아이와 추억하는 특별한 여행 <br>경기 수원 박물관 투어</h3>
+                        <h3>맛있는 찜질방 <br>귀여운 양머리투어</h3>
                         <img src="./semi_ahn_img/46c4df2e-0ebe-4298-8bf1-7570863211c9.png" alt="">
                     </a>
                 </div>
                 <div class="theme-mid">                   
                     <a href="#" class="theme-article">
-                        <h3>아이와 추억하는 특별한 여행 <br>경기 수원 박물관 투어</h3>
-                        <img src="./semi_ahn_img/46c4df2e-0ebe-4298-8bf1-7570863211c9.png" alt="">
+                        <h3>애인과 함께 <br>이쁜 야경투어</h3>
+                        <img src="./semi_ahn_img/d85d9f1f-8051-4e7d-a8f3-c3efe86d7bd9.png" alt="">
                     </a>
                     <a href="#" class="theme-article">
-                        <h3>아이와 추억하는 특별한 여행 <br>경기 수원 박물관 투어</h3>
-                        <img src="./semi_ahn_img/46c4df2e-0ebe-4298-8bf1-7570863211c9.png" alt="">
+                        <h3>아이와 추억하는 특별한 여행 <br>경치가 되게 좋아요</h3>
+                        <img src="./semi_ahn_img/d6daf862-3552-4d57-96ed-34775bcd91d1.png" alt="">
                     </a>
                 </div>
                 <div class="theme-right">
@@ -305,16 +679,58 @@
                         <img src="./semi_ahn_img/46c4df2e-0ebe-4298-8bf1-7570863211c9.png" alt="">
                     </a>
                     <a href="#" class="theme-article">
-                        <h3>아이와 추억하는 특별한 여행 <br>경기 수원 박물관 투어</h3>
-                        <img src="./semi_ahn_img/46c4df2e-0ebe-4298-8bf1-7570863211c9.png" alt="">
+                        <h3>노을 이쁘죠! <br>바다 보러가요 ㅎㅎ</h3>
+                        <img src="./semi_ahn_img/4db9b6b6-e84b-468b-af65-0c709bf19c2e.png" alt="">
                     </a>
                 </div>
             </div>
         </div>
-    </div>
-
+</div>
     <script>
 
     </script>
 </body>
+<div class="footer">
+    <footer>
+        <div class="box-footer">
+            <div class="footer-data">
+                <ul class="footer-menu">
+                    <li>
+                        <a href="#" class="personal-info">개인정보처리방침</a>
+                    </li>
+                    <li>
+                        <a href="#">이용약관</a>
+                    </li>
+                    <li>
+                        <a href="#">위치서비스이용약관</a>
+                    </li>
+                    <li>
+                        <a href="#">저작권정책</a>
+                    </li>
+                    <li>
+                        <a href="#">고객서비스헌장</a>
+                    </li>
+                    <li>
+                        <a href="#">전자우편무단수집거부</a>
+                    </li>
+                    <li>
+                        <a href="#">Q&A</a>
+                    </li>
+                    <li>
+                        <a href="#">찾아오시는 길</a>
+                    </li>
+                </ul>
+                <ul class="footer-address">
+                    <li>
+                        <span>우)12345</span>
+                        <span>서울특별시 강남구</span>
+                        TEL : 02-123-4567
+                    </li>
+                    <li>사업자등록번호 : 123-12-12345</li>
+                    <li>통신판매업신고 : 제1234-서울강남-1234호</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</div>
 </html>
