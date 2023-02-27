@@ -1,0 +1,15 @@
+views에 폴더 생성후 해당 폴더 하위에 jsp 작성
+
+Controller, XML등은 터치 X
+
+PUSH시 코멘트 작성 必
+(수정 날짜 및 시간, 수정파트 기재(파일명 포함))
+
+
+필요 플러그인은 전부
+
+C:\NaemomDaero\src\main\webapp\resources
+
+밑에 css or js에 저장
+필요 img는 resources/img폴더안에 XXXImg식으로 폴더 생성후 그 안에 저장
+(ex)header.jsp / headerImg   listPage.jsp / listPageImg   )
