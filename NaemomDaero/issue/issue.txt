@@ -1,15 +1,33 @@
-views에 폴더 생성후 해당 폴더 하위에 jsp 작성
-
-Controller, XML등은 터치 X
-
-PUSH시 코멘트 작성 必
-(수정 날짜 및 시간, 수정파트 기재(파일명 포함))
 
 
-필요 플러그인은 전부
+1. 모든 작업은 /NaemomDaero/**에서 진행
 
-C:\NaemomDaero\src\main\webapp\resources
+2. 작업 진행순서
+    A. 각자 분할된 업무이름에 맞는 branch 생성 ex) feature/lee/page-list
+    B. 해당 branch에서 작업 및 push진행 (master PUSH XXXX)
+    C. 작업 완료후
+        a. 병합파일이 없는 경우 오류가 없다면 master branch PUSH진행
+        b. 병합파일이 있는 경우 '병합담당자'가 확인후 병합담당자가 master branch PUSH진행
+    D. branch삭제 후 다음 진행할 업무에 맞는 branch생성
 
-밑에 css or js에 저장
-필요 img는 resources/img폴더안에 XXXImg식으로 폴더 생성후 그 안에 저장
-(ex)header.jsp / headerImg   listPage.jsp / listPageImg   )
+
+3. 작업 권한
+    - spring/src/webapp/WEB-INF/spring/**,  pom.xml, web.xml, 메인 package 
+        -> 1인관리, 추가를 원하는 코드가 있는 경우 '담당자'에게 코드를 함께 보내며 추가 및 수정요청
+    - 기타 views/class/interface/mapper등은 기본적으론 각자 작업 진행하나 master PUSH 금지
+    -
+
+4. 작업위치 및 규칙 상세
+    - front : views에 폴더 생성후 해당 폴더 하위에 jsp 작성, 혹시나 필요 폴더가 타팀원과 겹칠경우 업무 계획단계에서 미리 조율
+    - 플러그인 : C:\NaemomDaero\src\main\webapp\resources\**에 저장
+    - img파일 : C:\NaemomDaero\src\main\resources\img 에 폴더 생성후 하위 경로에 저장(폴더명은 필요 jsp명과 통일)
+        ( ex)header.jsp /headerImg/   listPage.jsp /listPageImg/)
+
+5. 기타
+    PUSH시 코멘트 작성 必
+    (수정 날짜 및 시간, 수정or 추가파트 기재(파일명 포함)  
+        ex) 2023/04/11 21:33 이현규 상세페이지 완료
+        (views/board/detail.jsp(추가)
+        && kr/kh/NaemomDaero/BoardController.java(수정)
+        && src/main/resources/mappers/BoardMappers.xml(수정)))
+
